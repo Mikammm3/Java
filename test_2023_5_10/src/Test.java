@@ -86,7 +86,7 @@ public class Test {
         System.out.println(str1 == str2);*/
     }
 
-    public static void main1(String[] args) {
+    /*public static void main1(String[] args) {
 
         //String str = "hello";
         String str = null;//该引用不指向任何对象
@@ -95,7 +95,7 @@ public class Test {
         //求字符串长度
         //System.out.println("hello".length());
 
-        /*String str1 = "hello";//方法1
+        *//*String str1 = "hello";//方法1
 
         String str2 = new String("hello");//方法2
 
@@ -104,8 +104,8 @@ public class Test {
 
         String s1 = new String("hello");
         String s2 = new String("world");
-        String s3 = s1;*/
+        String s3 = s1;*//*
 
 
-    }
+    }*/
 }
