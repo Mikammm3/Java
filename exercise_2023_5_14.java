@@ -67,3 +67,36 @@
 //        return true;
 //    }
 //}
+
+//LeetCode 434. 字符串中的单词数
+//class Solution {
+//    public int countSegments(String s) {
+//        if (s.isEmpty()) {
+//            return 0;
+//        }
+//        String[] str = s.split(" ");
+//        int len = str.length;
+//        for (int i = 0; i < str.length; i++) {
+//            boolean flag = false;
+//            for (int j = 0; j < str[i].length(); j++) {
+//                if (str[i].charAt(j) != ' ') {
+//                    flag = true;
+//                    break;
+//                }
+//            }
+//            if (!flag) {
+//                len--;
+//            }
+//        }
+//        return len;
+//    }
+//}
+
+
+//LeetCode 709. 转换成小写字母
+//class Solution {
+//    public String toLowerCase(String s) {
+//        s = s.toLowerCase();
+//        return s;
+//    }
+//}
