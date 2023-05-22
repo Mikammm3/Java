@@ -6,6 +6,29 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
+        MySingleList mySingleList = new MySingleList();
+        //mySingleList.creatList();
+        mySingleList.addLast(12);
+        mySingleList.addLast(23);
+        mySingleList.addLast(34);
+        mySingleList.addLast(45);
+        mySingleList.addLast(56);
+        mySingleList.display();
+        //mySingleList.addIndex(0, 199);
+        //mySingleList.addIndex(6, 999);
+        //mySingleList.addIndex(999, 9999);
+        mySingleList.remove(56);
+        mySingleList.display();
+
+        //mySingleList.addLast(199);
+        //mySingleList.display();
+
+        /*System.out.println(mySingleList.size());
+        System.out.println(mySingleList.contains(199));*/
+    }
+
+
+    public static void main1(String[] args) {
         CardList cardList = new CardList();
         List<Card> list = cardList.buyCards();
         System.out.println(list);

@@ -1,9 +1,10 @@
 package demo1;
 
 public class Card {
-    private String suit;
-    private int rank;
+    private String suit;//花色
+    private int rank;//扑克的数字
 
+    //提供构造方法
     public Card(String suit, int rank) {
         this.suit = suit;
         this.rank = rank;
