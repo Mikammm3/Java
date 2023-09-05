@@ -68,35 +68,53 @@ class BinaryTree {
         return A;
     }
 
-
-    public List<List<TreeNode>> levelOrder(TreeNode root) {
-        List<List<TreeNode>> ret = new ArrayList<>();
+    public void levelOrder(TreeNode root) {
         if (root == null) {
-            return ret;
+            return;
         }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()) {
-            int tmp = queue.size();
-            //求一下当前队列的大小  4
-            // 出队列4次 相当于把 这一层的节点都 出队了
-            List<TreeNode> tmp2 = new ArrayList<>();
-            while (tmp != 0) {
-                TreeNode cur = queue.poll();
-                tmp2.add(cur);
-                tmp--;
-                System.out.print(cur.val + " ");
-                if (cur.left != null) {
-                    queue.offer(cur.left);
-                }
-                if (cur.right != null) {
-                    queue.offer(cur.right);
-                }
+            TreeNode cur = queue.poll();
+            System.out.print(cur.val + " ");
+            if (cur.left != null) {
+                queue.offer(cur.left);
             }
-            ret.add(tmp2);
+            if (cur.right != null) {
+                queue.offer(cur.right);
+            }
         }
-        return ret;
+        System.out.println();
     }
+
+//    public List<List<TreeNode>> levelOrder(TreeNode root) {
+//        List<List<TreeNode>> ret = new ArrayList<>();
+//        if (root == null) {
+//            return ret;
+//        }
+//        Queue<TreeNode> queue = new LinkedList<>();
+//        queue.offer(root);
+//        while (!queue.isEmpty()) {
+//            int tmp = queue.size();
+//            //求一下当前队列的大小  4
+//            // 出队列4次 相当于把 这一层的节点都 出队了
+//            List<TreeNode> tmp2 = new ArrayList<>();
+//            while (tmp != 0) {
+//                TreeNode cur = queue.poll();
+//                tmp2.add(cur);
+//                tmp--;
+//                System.out.print(cur.val + " ");
+//                if (cur.left != null) {
+//                    queue.offer(cur.left);
+//                }
+//                if (cur.right != null) {
+//                    queue.offer(cur.right);
+//                }
+//            }
+//            ret.add(tmp2);
+//        }
+//        return ret;
+//    }
 
 //    public List<TreeNode> preOrder2(TreeNode root) {
 //        if (root == null) {
