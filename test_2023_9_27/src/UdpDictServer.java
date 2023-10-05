@@ -74,23 +74,23 @@ class UdpEchoClient {
     }
 }
 
-public class UdpDictServer extends UdpEchoServer {
-    private Map<String, String> map = new HashMap<>();
-
-    public UdpDictServer(int port) throws SocketException {
-        super(port);
-        map.put("cat", "小猫");
-        map.put("dog", "小狗");
-        map.put("duck", "小鸭子");
-    }
-
-    @Override
-    public String process(String request) {
-        return map.getOrDefault(request, "该词在词典中不存在!");
-    }
-
-    public static void main(String[] args) throws IOException {
-        UdpDictServer server = new UdpDictServer(8888);
-        server.start();
-    }
-}
+//public class UdpDictServer extends UdpEchoServer {
+//    private Map<String, String> map = new HashMap<>();
+//
+//    public UdpDictServer(int port) throws SocketException {
+//        super(port);
+//        map.put("cat", "小猫");
+//        map.put("dog", "小狗");
+//        map.put("duck", "小鸭子");
+//    }
+//
+//    @Override
+//    public String process(String request) {
+//        return map.getOrDefault(request, "该词在词典中不存在!");
+//    }
+//
+//    public static void main(String[] args) throws IOException {
+//        UdpDictServer server = new UdpDictServer(8888);
+//        server.start();
+//    }
+//}
