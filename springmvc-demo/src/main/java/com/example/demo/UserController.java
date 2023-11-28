@@ -1,10 +1,10 @@
 package com.example.demo;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -53,6 +53,29 @@ public class UserController {
             return list.toString();
         }
         return "list 为空";
+    }
+
+    @RequestMapping("/r8")
+    public String r8(@RequestBody UserInfo userInfo) {
+        return userInfo.toString();
+    }
+
+    @RequestMapping("/r9/{articleId}")
+    public String r9(@PathVariable Integer articleId) {
+        return "articleId: " + articleId;
+    }
+
+    @RequestMapping("/r10/{name}/{age}")
+    public String r10(@PathVariable("name") String username, @PathVariable Integer age) {
+        return "username: " + username + ", age: " + age;
+    }
+
+    @RequestMapping("/r11")
+    public String r11(@RequestPart MultipartFile file) throws IOException {
+        String fileName = file.getOriginalFilename();
+        // 将上传的文件放在 C:\Users\86135\Pictures\ 路径下
+        file.transferTo(new File("C:\\Users\\86135\\Pictures\\" + fileName));
+        return "获取上传文件: " + file.getOriginalFilename();
     }
 }
 

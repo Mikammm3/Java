@@ -6,6 +6,15 @@ public class UserInfo {
     private Integer age;
     private Integer id;
 
+    public UserInfo() {
+    }
+
+    public UserInfo(String name, Integer age, Integer id) {
+        this.name = name;
+        this.age = age;
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
