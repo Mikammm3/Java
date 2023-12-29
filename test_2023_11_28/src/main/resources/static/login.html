@@ -15,7 +15,22 @@
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script>
     function login() {
-    
+      $.ajax({
+        type: "post",
+        url: "/login/check",
+        data: {
+          userName: $("#userName").val(),
+          password: $("#password").val()
+        },
+        success: function(result){
+          if(result == true){
+            // 用户名和密码正确
+            location.href = "index.html"
+          }else {
+            alert("用户名或者密码错误")
+          }
+        }
+      });
     }
 
   </script>
