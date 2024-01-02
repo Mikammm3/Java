@@ -24,5 +24,4 @@ public class BookController {
         // 3. 返回数据
         return bookInfoList;
     }
-
 }
