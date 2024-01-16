@@ -1,0 +1,31 @@
+server:
+  port: 9090
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.0:3306/dbname?characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+
+# 自定义配置项
+string:
+  value: sss
+  str1: Hello \n Spring Boot.
+  str2: 'Hello \n Spring Boot.'
+  str3: "Hello \n Spring Boot."
+string.value2: 3s
+
+
+student:
+  id: 1
+  name: Java
+  age: 18
+
+dbtypes:
+  name:
+    - mysql
+    - sqlserver
+    - db2
+  map:
+    k1: kk1
+    k2: kk2
+    k3: kk3
