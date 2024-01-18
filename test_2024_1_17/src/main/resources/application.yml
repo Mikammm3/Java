@@ -1,0 +1,13 @@
+kaptcha:
+  text-producer:
+    character:
+      length: 4
+    font:
+      color: blue
+  items:
+    # admin captcha
+    admin:
+      path: /admin/captcha
+      session:
+        key: KAPTCHA_SESSION_KEY
+        date: KAPTCHA_SESSION_DATE
