@@ -1,12 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.ioc.config.UserConfiguration;
-import com.example.demo.ioc.conponent.UserComponent;
-import com.example.demo.ioc.controller.UserController;
 import com.example.demo.ioc.controller.UserController2;
-import com.example.demo.ioc.model.UserInfo;
-import com.example.demo.ioc.repo.UserRepository;
-import com.example.demo.ioc.service.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

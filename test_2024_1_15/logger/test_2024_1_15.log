@@ -1,0 +1,33 @@
+2024-01-18 21:13:23.666  INFO 22596 --- [main] com.example.demo.IocDemoApplication      : Starting IocDemoApplication using Java 1.8.0_192 on ib with PID 22596 (C:\Code\Java\test_2024_1_15\target\classes started by 86135 in C:\Code\Java\test_2024_1_15)
+2024-01-18 21:13:23.669  INFO 22596 --- [main] com.example.demo.IocDemoApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-01-18 21:13:24.777  INFO 22596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-18 21:13:24.784  INFO 22596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-18 21:13:24.795  INFO 22596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-18 21:13:24.938  INFO 22596 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-18 21:13:24.938  INFO 22596 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1220 ms
+2024-01-18 21:13:25.303  INFO 22596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-18 21:13:25.315  INFO 22596 --- [main] com.example.demo.IocDemoApplication      : Started IocDemoApplication in 2.092 seconds (JVM running for 2.472)
+2024-01-18 21:13:38.109  INFO 22596 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-18 21:13:38.110  INFO 22596 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-18 21:13:38.111  INFO 22596 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-18 21:13:38.194 ERROR 22596 --- [http-nio-8080-exec-1] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
+2024-01-18 21:13:38.194  WARN 22596 --- [http-nio-8080-exec-1] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
+2024-01-18 21:13:38.195  INFO 22596 --- [http-nio-8080-exec-1] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
+2024-01-18 21:13:38.397 ERROR 22596 --- [http-nio-8080-exec-6] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
+2024-01-18 21:13:38.398  WARN 22596 --- [http-nio-8080-exec-6] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
+2024-01-18 21:13:38.398  INFO 22596 --- [http-nio-8080-exec-6] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
+2024-01-18 21:13:38.574 ERROR 22596 --- [http-nio-8080-exec-2] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
+2024-01-18 21:13:38.574  WARN 22596 --- [http-nio-8080-exec-2] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
+2024-01-18 21:13:38.575  INFO 22596 --- [http-nio-8080-exec-2] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
+2024-01-18 21:13:38.763 ERROR 22596 --- [http-nio-8080-exec-3] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
+2024-01-18 21:13:38.763  WARN 22596 --- [http-nio-8080-exec-3] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
+2024-01-18 21:13:38.763  INFO 22596 --- [http-nio-8080-exec-3] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
+2024-01-18 21:13:38.931 ERROR 22596 --- [http-nio-8080-exec-4] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
+2024-01-18 21:13:38.931  WARN 22596 --- [http-nio-8080-exec-4] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
+2024-01-18 21:13:38.931  INFO 22596 --- [http-nio-8080-exec-4] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
+2024-01-18 21:13:39.100 ERROR 22596 --- [http-nio-8080-exec-5] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
+2024-01-18 21:13:39.101  WARN 22596 --- [http-nio-8080-exec-5] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
+2024-01-18 21:13:39.101  INFO 22596 --- [http-nio-8080-exec-5] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
+2024-01-18 21:13:39.318 ERROR 22596 --- [http-nio-8080-exec-7] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
+2024-01-18 21:13:39.318  WARN 22596 --- [http-nio-8080-exec-7] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
+2024-01-18 21:13:39.319  INFO 22596 --- [http-nio-8080-exec-7] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====

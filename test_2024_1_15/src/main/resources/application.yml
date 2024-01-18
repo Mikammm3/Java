@@ -29,3 +29,14 @@ dbtypes:
     k1: kk1
     k2: kk2
     k3: kk3
+
+# 日志配置
+#logging:
+#  level:
+#    root: debug
+
+# 设置⽇志⽂件的⽂件名
+logging:
+  file:
+    #    path: logger/  # 配置日志路径
+    name: logger/test_2024_1_15.log # 配置日志名称

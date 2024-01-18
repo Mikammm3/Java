@@ -1,0 +1,9 @@
+2024-01-18 21:11:43.891  INFO 15228 --- [main] com.example.demo.IocDemoApplication      : Starting IocDemoApplication using Java 1.8.0_192 on ib with PID 15228 (C:\Code\Java\test_2024_1_15\target\classes started by 86135 in C:\Code\Java\test_2024_1_15)
+2024-01-18 21:11:43.896  INFO 15228 --- [main] com.example.demo.IocDemoApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-01-18 21:11:45.058  INFO 15228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-18 21:11:45.068  INFO 15228 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-18 21:11:45.078  INFO 15228 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-18 21:11:45.213  INFO 15228 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-18 21:11:45.214  INFO 15228 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1269 ms
+2024-01-18 21:11:45.555  INFO 15228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-18 21:11:45.567  INFO 15228 --- [main] com.example.demo.IocDemoApplication      : Started IocDemoApplication in 2.157 seconds (JVM running for 2.558)
