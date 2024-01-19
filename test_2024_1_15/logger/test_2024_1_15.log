@@ -1,33 +1,64 @@
-2024-01-18 21:13:23.666  INFO 22596 --- [main] com.example.demo.IocDemoApplication      : Starting IocDemoApplication using Java 1.8.0_192 on ib with PID 22596 (C:\Code\Java\test_2024_1_15\target\classes started by 86135 in C:\Code\Java\test_2024_1_15)
-2024-01-18 21:13:23.669  INFO 22596 --- [main] com.example.demo.IocDemoApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-01-18 21:13:24.777  INFO 22596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-01-18 21:13:24.784  INFO 22596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-01-18 21:13:24.795  INFO 22596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-01-18 21:13:24.938  INFO 22596 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-01-18 21:13:24.938  INFO 22596 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1220 ms
-2024-01-18 21:13:25.303  INFO 22596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-01-18 21:13:25.315  INFO 22596 --- [main] com.example.demo.IocDemoApplication      : Started IocDemoApplication in 2.092 seconds (JVM running for 2.472)
-2024-01-18 21:13:38.109  INFO 22596 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-01-18 21:13:38.110  INFO 22596 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-01-18 21:13:38.111  INFO 22596 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-01-18 21:13:38.194 ERROR 22596 --- [http-nio-8080-exec-1] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
-2024-01-18 21:13:38.194  WARN 22596 --- [http-nio-8080-exec-1] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
-2024-01-18 21:13:38.195  INFO 22596 --- [http-nio-8080-exec-1] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
-2024-01-18 21:13:38.397 ERROR 22596 --- [http-nio-8080-exec-6] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
-2024-01-18 21:13:38.398  WARN 22596 --- [http-nio-8080-exec-6] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
-2024-01-18 21:13:38.398  INFO 22596 --- [http-nio-8080-exec-6] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
-2024-01-18 21:13:38.574 ERROR 22596 --- [http-nio-8080-exec-2] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
-2024-01-18 21:13:38.574  WARN 22596 --- [http-nio-8080-exec-2] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
-2024-01-18 21:13:38.575  INFO 22596 --- [http-nio-8080-exec-2] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
-2024-01-18 21:13:38.763 ERROR 22596 --- [http-nio-8080-exec-3] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
-2024-01-18 21:13:38.763  WARN 22596 --- [http-nio-8080-exec-3] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
-2024-01-18 21:13:38.763  INFO 22596 --- [http-nio-8080-exec-3] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
-2024-01-18 21:13:38.931 ERROR 22596 --- [http-nio-8080-exec-4] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
-2024-01-18 21:13:38.931  WARN 22596 --- [http-nio-8080-exec-4] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
-2024-01-18 21:13:38.931  INFO 22596 --- [http-nio-8080-exec-4] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
-2024-01-18 21:13:39.100 ERROR 22596 --- [http-nio-8080-exec-5] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
-2024-01-18 21:13:39.101  WARN 22596 --- [http-nio-8080-exec-5] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
-2024-01-18 21:13:39.101  INFO 22596 --- [http-nio-8080-exec-5] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
-2024-01-18 21:13:39.318 ERROR 22596 --- [http-nio-8080-exec-7] c.e.d.ioc.controller.LoggerController    : =====我是 error 级别的日志=====
-2024-01-18 21:13:39.318  WARN 22596 --- [http-nio-8080-exec-7] c.e.d.ioc.controller.LoggerController    : =====我是 warn 级别的日志=====
-2024-01-18 21:13:39.319  INFO 22596 --- [http-nio-8080-exec-7] c.e.d.ioc.controller.LoggerController    : =====我是 info 级别的日志=====
+2024-01-19 20:20:45.994  INFO 1228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-19 20:20:46.006  INFO 1228 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-19 20:20:46.007  INFO 1228 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-19 20:20:46.133  INFO 1228 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-19 20:20:46.134  INFO 1228 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1106 ms
+2024-01-19 20:20:46.478  INFO 1228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-19 20:20:46.491  INFO 1228 --- [main] com.example.demo.IocDemoApplication      : Started IocDemoApplication in 1.981 seconds (JVM running for 2.4)
+2024-01-19 20:46:24.595 com.example.demo.IocDemoApplication logStarting 55 [main] Starting IocDemoApplication using Java 1.8.0_192 on ib with PID 16704 (C:\Code\Java\test_2024_1_15\target\classes started by 86135 in C:\Code\Java\test_2024_1_15)
+2024-01-19 20:46:24.604 com.example.demo.IocDemoApplication logStartupProfileInfo 632 [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 20:46:25.623 org.springframework.boot.web.embedded.tomcat.TomcatWebServer initialize 108 [main] Tomcat initialized with port(s): 8080 (http)
+2024-01-19 20:46:25.632 org.apache.catalina.core.StandardService log 173 [main] Starting service [Tomcat]
+2024-01-19 20:46:25.633 org.apache.catalina.core.StandardEngine log 173 [main] Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-19 20:46:25.774 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log 173 [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 20:46:25.775 org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext prepareWebApplicationContext 292 [main] Root WebApplicationContext: initialization completed in 1125 ms
+2024-01-19 20:46:26.126 org.springframework.boot.web.embedded.tomcat.TomcatWebServer start 220 [main] Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-19 20:46:26.134 com.example.demo.IocDemoApplication logStarted 61 [main] Started IocDemoApplication in 1.991 seconds (JVM running for 2.358)
+2024-01-19 20:46:35.027 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log 173 [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 20:46:35.028 org.springframework.web.servlet.DispatcherServlet initServletBean 525 [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-01-19 20:46:35.031 org.springframework.web.servlet.DispatcherServlet initServletBean 547 [http-nio-8080-exec-1] Completed initialization in 2 ms
+2024-01-19 20:46:35.119 com.example.demo.ioc.controller.LoggerController logLevel 25 [http-nio-8080-exec-1] =====我是 error 级别的日志=====
+2024-01-19 20:46:35.120 com.example.demo.ioc.controller.LoggerController logLevel 26 [http-nio-8080-exec-1] =====我是 warn 级别的日志=====
+2024-01-19 20:46:35.120 com.example.demo.ioc.controller.LoggerController logLevel 27 [http-nio-8080-exec-1] =====我是 info 级别的日志=====
+2024-01-19 20:46:35.121 com.example.demo.ioc.controller.LoggerController logLevel 28 [http-nio-8080-exec-1] =====我是 debug 级别的日志=====
+2024-01-19 20:49:35.015  INFO 16928 --- [main] com.example.demo.IocDemoApplication      : Starting IocDemoApplication using Java 1.8.0_192 on ib with PID 16928 (C:\Code\Java\test_2024_1_15\target\classes started by 86135 in C:\Code\Java\test_2024_1_15)
+2024-01-19 20:49:35.018  INFO 16928 --- [main] com.example.demo.IocDemoApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-01-19 20:49:36.069  INFO 16928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-19 20:49:36.078  INFO 16928 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-19 20:49:36.079  INFO 16928 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-19 20:49:36.214  INFO 16928 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-19 20:49:36.214  INFO 16928 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1149 ms
+2024-01-19 20:49:36.535  INFO 16928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-19 20:49:36.549  INFO 16928 --- [main] com.example.demo.IocDemoApplication      : Started IocDemoApplication in 1.984 seconds (JVM running for 2.413)
+2024-01-19 22:16:50.452  INFO 18408 --- [main] com.example.demo.IocDemoApplication      : Starting IocDemoApplication using Java 1.8.0_192 on ib with PID 18408 (C:\Code\Java\test_2024_1_15\target\classes started by 86135 in C:\Code\Java\test_2024_1_15)
+2024-01-19 22:16:50.455  INFO 18408 --- [main] com.example.demo.IocDemoApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-01-19 22:16:51.685  INFO 18408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-19 22:16:51.696  INFO 18408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-19 22:16:51.696  INFO 18408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-19 22:16:51.834  INFO 18408 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-19 22:16:51.834  INFO 18408 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1324 ms
+2024-01-19 22:16:52.195  INFO 18408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-19 22:16:52.206  INFO 18408 --- [main] com.example.demo.IocDemoApplication      : Started IocDemoApplication in 2.334 seconds (JVM running for 2.918)
+2024-01-19 22:16:55.898  INFO 18408 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 22:16:55.899  INFO 18408 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-19 22:16:55.899  INFO 18408 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-01-19 22:16:55.975 ERROR 18408 --- [http-nio-8080-exec-3] c.e.d.ioc.controller.LoggerController2   : =====我是 error 级别的日志=====
+2024-01-19 22:16:55.976  WARN 18408 --- [http-nio-8080-exec-3] c.e.d.ioc.controller.LoggerController2   : =====我是 warn 级别的日志=====
+2024-01-19 22:16:55.977  INFO 18408 --- [http-nio-8080-exec-3] c.e.d.ioc.controller.LoggerController2   : =====我是 info 级别的日志=====
+2024-01-19 22:16:55.977 DEBUG 18408 --- [http-nio-8080-exec-3] c.e.d.ioc.controller.LoggerController2   : =====我是 debug 级别的日志=====
+2024-01-19 22:17:29.062 com.example.demo.IocDemoApplication logStarting 55 [main] Starting IocDemoApplication using Java 1.8.0_192 on ib with PID 13792 (C:\Code\Java\test_2024_1_15\target\classes started by 86135 in C:\Code\Java\test_2024_1_15)
+2024-01-19 22:17:29.065 com.example.demo.IocDemoApplication logStartupProfileInfo 632 [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 22:17:30.221 org.springframework.boot.web.embedded.tomcat.TomcatWebServer initialize 108 [main] Tomcat initialized with port(s): 8080 (http)
+2024-01-19 22:17:30.229 org.apache.catalina.core.StandardService log 173 [main] Starting service [Tomcat]
+2024-01-19 22:17:30.230 org.apache.catalina.core.StandardEngine log 173 [main] Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-19 22:17:30.366 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log 173 [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 22:17:30.366 org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext prepareWebApplicationContext 292 [main] Root WebApplicationContext: initialization completed in 1253 ms
+2024-01-19 22:17:30.723 org.springframework.boot.web.embedded.tomcat.TomcatWebServer start 220 [main] Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-19 22:17:30.735 com.example.demo.IocDemoApplication logStarted 61 [main] Started IocDemoApplication in 2.214 seconds (JVM running for 2.662)
+2024-01-19 22:17:36.904 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log 173 [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 22:17:36.906 org.springframework.web.servlet.DispatcherServlet initServletBean 525 [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-01-19 22:17:36.909 org.springframework.web.servlet.DispatcherServlet initServletBean 547 [http-nio-8080-exec-2] Completed initialization in 2 ms
+2024-01-19 22:17:37.075 com.example.demo.ioc.controller.LoggerController2 logLevel 16 [http-nio-8080-exec-2] =====我是 error 级别的日志=====
+2024-01-19 22:17:37.076 com.example.demo.ioc.controller.LoggerController2 logLevel 17 [http-nio-8080-exec-2] =====我是 warn 级别的日志=====
+2024-01-19 22:17:37.077 com.example.demo.ioc.controller.LoggerController2 logLevel 18 [http-nio-8080-exec-2] =====我是 info 级别的日志=====
+2024-01-19 22:17:37.078 com.example.demo.ioc.controller.LoggerController2 logLevel 19 [http-nio-8080-exec-2] =====我是 debug 级别的日志=====

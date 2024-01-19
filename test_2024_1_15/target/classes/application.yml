@@ -31,12 +31,24 @@ dbtypes:
     k3: kk3
 
 # 日志配置
-#logging:
-#  level:
-#    root: debug
-
-# 设置⽇志⽂件的⽂件名
 logging:
+  level:
+    root: info
+    com:
+      example:
+        demo:
+          ioc:
+            controller: debug
+
+  # 设置⽇志⽂件的⽂件名
   file:
     #    path: logger/  # 配置日志路径
-    name: logger/test_2024_1_15.log
+    name: logger/test_2024_1_15.log # 配置日志名称
+
+  logback:
+    rollingpolicy:
+      #      max-file-size: 2KB
+      file-name-pattern: ${LOG_FILE}.%d{yyyy-MM-dd}.%i
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %c %M %L [%thread] %m%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %c %M %L [%thread] %m%n' # 文件的日志格式配置
