@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mika.mybatis.mapper.UserInfoXmlMapper">
+    <sql id="cols">
+        select * from userinfo
+    </sql>
+
+    <select id="queryUserList" resultType="com.mika.mybatis.model.UserInfo">
+        <!--        select * from userinfo-->
+        <include refid="cols"></include>
+    </select>
+    <resultMap id="Base" type="com.mika.mybatis.model.UserInfo">
+        <id column="id" property="id"></id>
+        <result column="delete_flag" property="deleteFlag"></result>
+        <result column="create_time" property="createTime"></result>
+        <result column="update_time" property="updateTime"></result>
+    </resultMap>
+    <select id="queryUserList2" resultMap="Base">
+        select * from userinfo
+    </select>
+    <select id="queryUserByWhere" resultType="com.mika.mybatis.model.UserInfo">
+        SELECT * FROM userinfo
+        <where>
+            <if test="userName!=null">
+                username = #{userName}
+            </if>
+            <if test="age != null">
+                and age = #{age}
+            </if>
+        </where>
+    </select>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        userinfo
+        (username, password, age, gender,phone)
+        values
+        (#{username},#{password},#{age},#{gender},#{phone})
+    </insert>
+    <insert id="insert2" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        userinfo
+        <trim prefixOverrides="," suffixOverrides="," prefix="(" suffix=")">
+            <if test="username!=null">
+                username
+            </if>
+            <if test="password!=null">
+                ,password
+            </if>
+            <if test="age!=null">
+                ,age
+            </if>
+            <if test="gender!=null">
+                ,gender
+            </if>
+            <if test="phone!=null">
+                ,phone
+            </if>
+        </trim>
+        values
+        <trim prefixOverrides="," suffixOverrides="," prefix="(" suffix=")">
+            <if test="username!=null">#{username}</if>
+            <if test="password!=null">,#{password}</if>
+            <if test="age!=null">,#{age}</if>
+            <if test="gender!=null">,#{gender}</if>
+            <if test="phone!=null">,#{phone}</if>
+        </trim>
+    </insert>
+    <delete id="delete">
+        delete from userinfo where id = #{id}
+    </delete>
+    <update id="update">
+        update userinfo set password = #{password} where id = #{id}
+    </update>
+    <update id="update2">
+        update userinfo
+        <set>
+            <if test="username!=null">
+                username = #{username},
+            </if>
+            <if test="password!=null">
+                password = #{password},
+            </if>
+            <if test="age!=null">
+                age = #{age}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+    <delete id="batchDelete">
+        DELETE FROM userinfo WHERE id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+        <!--        (11,12,13)-->
+    </delete>
+</mapper>

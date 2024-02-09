@@ -86,4 +86,34 @@ class UserInfoMapperTest {
         userInfo.setId(5);
         userInfoMapper.updateByOb(userInfo);
     }
+
+    @Test
+    void queryUserInfo2() {
+        log.info(userInfoMapper.queryUserInfo2(1).toString());
+    }
+
+    @Test
+    void queryUserInfoByName() {
+        log.info(userInfoMapper.queryUserInfoByName("admin").toString());
+    }
+
+    @Test
+    void queryUserInfoByName2() {
+        log.info(userInfoMapper.queryUserInfoByName2("admin").toString());
+    }
+
+    @Test
+    void queryUserByOrder() {
+        log.info(userInfoMapper.queryUserByOrder("desc").toString());
+    }
+
+    @Test
+    void queryUserByLike() {
+        log.info(userInfoMapper.queryUserByLike("an").toString());
+    }
+
+    @Test
+    void queryUserByLike2() {
+        log.info(userInfoMapper.queryUserByLike2("an").toString());
+    }
 }

@@ -18,4 +18,11 @@ public class UserController {
     public List<UserInfo> queryAllUser() {
         return userService.queryAllUser();
     }
+
+    // 模拟 SQL 注入，完成用户登录
+    @RequestMapping("/login")
+    public UserInfo login(String userName, String password) {
+        // 1. 根据用户名和密码查询
+        return userService.queryUserByNameAndPs(userName, password);
+    }
 }

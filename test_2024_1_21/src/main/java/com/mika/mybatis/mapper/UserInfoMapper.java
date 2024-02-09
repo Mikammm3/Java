@@ -32,6 +32,16 @@ public interface UserInfoMapper {
     @Select("SELECT * FROM userinfo WHERE id = #{userId}")
     UserInfo queryUserInfo(Integer userId);
 
+    @Select("SELECT * FROM userinfo WHERE id = ${userId}")
+    UserInfo queryUserInfo2(Integer userId);
+
+    @Select("SELECT * FROM userinfo WHERE username = #{name}")
+    UserInfo queryUserInfoByName(String name);
+
+    @Select("SELECT * FROM userinfo WHERE username = '${name}'")
+    UserInfo queryUserInfoByName2(String name);
+
+
     @ResultMap(value = "Base")
     @Select("SELECT * FROM userinfo WHERE id = #{userId} AND delete_flag = #{deleteFlag}")
     UserInfo queryUserInfoByDF(Integer userId, Integer deleteFlag);
@@ -63,4 +73,18 @@ public interface UserInfoMapper {
 
     @Update("update userinfo set username = #{username},password = #{password} where id = #{id}")
     Integer updateByOb(UserInfo userInfo);
+
+    @Select("SELECT * FROM userinfo WHERE username = '${userName}' and password = '${password}'")
+    List<UserInfo> queryUserByNameAndPs(String userName, String password);
+
+
+    @Select("select * from userinfo order by id ${order}")
+    List<UserInfo> queryUserByOrder(String order);
+
+
+    @Select("select * from userinfo where username like '%${name}%' ")
+    List<UserInfo> queryUserByLike(String name);
+
+    @Select("SELECT * FROM userinfo where username LIKE CONCAT('%',#{name},'%')")
+    List<UserInfo> queryUserByLike2(String name);
 }

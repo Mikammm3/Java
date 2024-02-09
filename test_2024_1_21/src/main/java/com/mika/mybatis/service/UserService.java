@@ -15,4 +15,13 @@ public class UserService {
     public List<UserInfo> queryAllUser() {
         return userInfoMapper.queryUserList();
     }
+
+
+    public UserInfo queryUserByNameAndPs(String userName, String password) {
+        List<UserInfo> userInfos = userInfoMapper.queryUserByNameAndPs(userName, password);
+        if (userInfos.size() > 1) {
+            return userInfos.get(0);
+        }
+        return null;
+    }
 }
