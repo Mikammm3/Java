@@ -3,6 +3,7 @@ package com.mika.book.model;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Data
 public class BookInfo {
@@ -12,6 +13,8 @@ public class BookInfo {
     private Integer count;
     private BigDecimal price;
     private String publish;
-    private Integer state;// 1-可借阅 2-不可借阅
+    private Integer status;// 1-可借阅 2-不可借阅
     private String stateCN;
+    private Date createTime;
+    private Date updateTime;
 }

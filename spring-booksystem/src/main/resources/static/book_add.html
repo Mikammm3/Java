@@ -35,7 +35,7 @@
             </div>
             <div class="form-group">
                 <label for="bookStock">图书库存</label>
-                <input type="text" class="form-control" placeholder="请输入图书库存" id="bookStock" name="count"/>
+                <input type="text" class="form-control" placeholder="请输入图书库存" id="bookStock" name="count" />
             </div>
 
             <div class="form-group">
@@ -64,8 +64,25 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script>
         function add() {
-            alert("添加成功");
-            location.href = "book_list.html";
+            // 添加图书
+            $.ajax({
+                type: "post",
+                url: "/book/addBook",
+                data: $("#addBook").serialize(),
+                success: function (result) {
+                    if (result == "") {
+                        // 图书添加成功
+                        // alert("添加成功");
+                        location.href = "book_list.html";
+                    }else {
+                        // 图书添加失败
+                        alert(result);
+                    }
+                }
+
+            });
+            // alert("添加成功");
+            // location.href = "book_list.html";
         }
     </script>
 </body>

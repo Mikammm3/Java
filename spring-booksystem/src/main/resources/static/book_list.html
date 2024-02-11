@@ -69,8 +69,10 @@
             function getBookList() {
                 $.ajax({
                     type: 'get',
-                    url: '/book/getList',
-                    success: function (books) {
+                    url: '/book/getListByPage' + location.search,
+                    success: function (result) {
+                        var books = result.records;
+                        console.log(books);
                         var finalHtml = "";
                         for (var book of books) {
                             // 拼接 html
@@ -93,27 +95,32 @@
 
                         }
                         $("tbody").html(finalHtml);
+
+                        // 处理翻页信息
+                        //翻页信息
+                        $("#pageContainer").jqPaginator({
+                            totalCounts: result.count, //总记录数
+                            pageSize: 10,    //每页的个数
+                            visiblePages: 5, //可视页数
+                            currentPage: result.pageRequest.currentPage,  //当前页码
+                            first: '<li class="page-item"><a class="page-link">首页</a></li>',
+                            prev: '<li class="page-item"><a class="page-link" href="javascript:void(0);">上一页<\/a><\/li>',
+                            next: '<li class="page-item"><a class="page-link" href="javascript:void(0);">下一页<\/a><\/li>',
+                            last: '<li class="page-item"><a class="page-link" href="javascript:void(0);">最后一页<\/a><\/li>',
+                            page: '<li class="page-item"><a class="page-link" href="javascript:void(0);">{{page}}<\/a><\/li>',
+                            //页面初始化和页码点击时都会执行
+                            onPageChange: function (page, type) {
+                                console.log("第" + page + "页, 类型:" + type);
+                                if(type == "change") {
+                                    location.href = "book_list.html?currentPage=" + page;
+                                }
+                            }
+                        });
                     }
                 });
 
             }
 
-            //翻页信息
-            $("#pageContainer").jqPaginator({
-                totalCounts: 100, //总记录数
-                pageSize: 10,    //每页的个数
-                visiblePages: 5, //可视页数
-                currentPage: 1,  //当前页码
-                first: '<li class="page-item"><a class="page-link">首页</a></li>',
-                prev: '<li class="page-item"><a class="page-link" href="javascript:void(0);">上一页<\/a><\/li>',
-                next: '<li class="page-item"><a class="page-link" href="javascript:void(0);">下一页<\/a><\/li>',
-                last: '<li class="page-item"><a class="page-link" href="javascript:void(0);">最后一页<\/a><\/li>',
-                page: '<li class="page-item"><a class="page-link" href="javascript:void(0);">{{page}}<\/a><\/li>',
-                //页面初始化和页码点击时都会执行
-                onPageChange: function (page, type) {
-                    console.log("第" + page + "页, 类型:" + type);
-                }
-            });
             function deleteBook(id) {
                 var isDelete = confirm("确认删除?");
                 if (isDelete) {

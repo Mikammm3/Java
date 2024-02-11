@@ -1,25 +1,45 @@
 package com.mika.book.service;
 
-import com.mika.book.dao.BookDao;
+import com.mika.book.enums.BookStatusEnums;
+import com.mika.book.mapper.BookInfoMapper;
 import com.mika.book.model.BookInfo;
+import com.mika.book.model.PageRequest;
+import com.mika.book.model.PageResult;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class BookService {
     // 根据数据层返回的结果，对数据进行处理
-    public List<BookInfo> getBookInfoList() {
-        List<BookInfo> bookInfoList;
-        BookDao bookDao = new BookDao();
-        // 1. 从dao获取数据
-        bookInfoList = bookDao.mockBookData();
-        // 2. 对数据进行处理: 状态转换
-        for (BookInfo bookInfo : bookInfoList) {
-            if (bookInfo.getState() == 1) {
-                bookInfo.setStateCN("可借阅");
-            } else if (bookInfo.getState() == 2) {
-                bookInfo.setStateCN("不可借阅");
-            }
+    @Autowired
+    private BookInfoMapper bookInfoMapper;
+
+    public Integer insertBook(BookInfo bookInfo) {
+        return bookInfoMapper.insertBook(bookInfo);
+    }
+
+    public PageResult<BookInfo> getListByPage(PageRequest pageRequest) {
+        // 1. 查询记录的总数
+        Integer count = bookInfoMapper.count();
+        // 2. 查询当前页的数据
+        List<BookInfo> bookInfos = bookInfoMapper.queryListByPage(pageRequest);
+        for (BookInfo bookInfo : bookInfos) {
+            // 根据状态，设置描述
+            bookInfo.setStateCN(BookStatusEnums.getDescByCode(bookInfo.getStatus()).getDesc());
         }
-        return bookInfoList;
+
+        return new PageResult<>(bookInfos, count, pageRequest);
+
+    }
+
+    public BookInfo queryBookById(Integer bookId) {
+        return bookInfoMapper.queryBookById(bookId);
+    }
+
+    public Integer updateBook(BookInfo bookInfo) {
+        return bookInfoMapper.updateBook(bookInfo);
     }
 }

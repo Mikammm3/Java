@@ -30,11 +30,11 @@
             </div>
             <div class="form-group">
                 <label for="bookAuthor">图书作者</label>
-                <input type="text" class="form-control" id="bookAuthor" name="author"/>
+                <input type="text" class="form-control" id="bookAuthor" name="author" />
             </div>
             <div class="form-group">
                 <label for="bookStock">图书库存</label>
-                <input type="text" class="form-control" id="bookStock" name="count"/>
+                <input type="text" class="form-control" id="bookStock" name="count" />
             </div>
             <div class="form-group">
                 <label for="bookPrice">图书定价：</label>
@@ -42,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label for="bookPublisher">出版社</label>
-                <input type="text" id="bookPublisher" class="form-control" name="publish"/>
+                <input type="text" id="bookPublisher" class="form-control" name="publish" />
             </div>
             <div class="form-group">
                 <label for="bookStatus">图书状态</label>
@@ -59,10 +59,38 @@
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script>
-        
+        $.ajax({
+            type: "get",
+            url: "/book/queryBookById" + location.search,
+            success: function (book) {
+                console.log(book);
+                if (book != null) {
+                    $("#bookId").val(book.id);
+                    $("#bookName").val(book.bookName);
+                    $("#bookAuthor").val(book.author);
+                    $("#bookStock").val(book.count);
+                    $("#bookPrice").val(book.price);
+                    $("#bookPublisher").val(book.publish);
+                    $("#bookStatus").val(book.status);
+                }
+            }
+        });
         function update() {
-            alert("更新成功");
-            location.href = "book_list.html"
+            $.ajax({
+                type: "post",
+                url: "/book/updateBook",
+                data: $("#updateBook").serialize(),
+                success: function (result) {
+                    if (result == true) {
+                        // alert("更新成功");
+                        location.href = "book_list.html"
+                    } else {
+                        alert("更新失败");
+                    }
+                }
+            });
+            // alert("更新成功");
+            // location.href = "book_list.html"
         }
     </script>
 </body>
