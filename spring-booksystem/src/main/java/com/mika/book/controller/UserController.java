@@ -1,6 +1,7 @@
 package com.mika.book.controller;
 
 
+import com.mika.book.constants.Constants;
 import com.mika.book.model.UserInfo;
 import com.mika.book.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class UserController {
         if (userInfo.getPassword().equals(password)) {
             userInfo.setPassword("");
             // 存 session
-            session.setAttribute("user_session", userInfo);
+            session.setAttribute(Constants.USER_SESSION_KEY, userInfo);
             return true;
         }
         return false;
