@@ -282,3 +282,23 @@
 2024-02-12 23:16:55.097  INFO 13844 --- [http-nio-8080-exec-10] c.m.book.interceptor.LoginInterceptor    : 视图渲染后执行: LoginInterceptor.afterCompletion....
 2024-02-12 23:20:10.571  INFO 13844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-02-12 23:20:10.588  INFO 13844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12 23:30:03.821  INFO 3348 --- [main] com.mika.book.SpringBookApplication      : Starting SpringBookApplication using Java 1.8.0_192 on ib with PID 3348 (C:\Code\Java\spring-booksystem\target\classes started by 86135 in C:\Code\Java\spring-booksystem)
+2024-02-12 23:30:03.825  INFO 3348 --- [main] com.mika.book.SpringBookApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-02-12 23:30:04.927  INFO 3348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12 23:30:04.936  INFO 3348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12 23:30:04.936  INFO 3348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-02-12 23:30:05.037  INFO 3348 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12 23:30:05.038  INFO 3348 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1169 ms
+2024-02-12 23:30:05.716  INFO 3348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12 23:30:05.728  INFO 3348 --- [main] com.mika.book.SpringBookApplication      : Started SpringBookApplication in 2.272 seconds (JVM running for 2.591)
+2024-02-12 23:30:27.455  INFO 3348 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-12 23:30:27.456  INFO 3348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-12 23:30:27.458  INFO 3348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-12 23:30:27.564  INFO 3348 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12 23:30:27.864  INFO 3348 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12 23:30:28.037  INFO 3348 --- [http-nio-8080-exec-2] c.m.book.interceptor.LoginInterceptor    : 目标方法执行前执行: LoginInterceptor.preHandle....
+2024-02-12 23:30:28.042  INFO 3348 --- [http-nio-8080-exec-2] com.mika.book.controller.BookController  : 查询列表信息，pageRequest:PageRequest(currentPage=1, pageSize=10, offset=0)
+2024-02-12 23:31:12.214  INFO 3348 --- [http-nio-8080-exec-4] c.m.book.interceptor.LoginInterceptor    : 目标方法执行前执行: LoginInterceptor.preHandle....
+2024-02-12 23:31:12.219  INFO 3348 --- [http-nio-8080-exec-4] com.mika.book.controller.BookController  : 查询列表信息，pageRequest:PageRequest(currentPage=2, pageSize=10, offset=10)
+2024-02-12 23:31:31.416  INFO 3348 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12 23:31:31.424  INFO 3348 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
