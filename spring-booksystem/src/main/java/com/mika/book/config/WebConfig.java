@@ -17,7 +17,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addInterceptor(loginInterceptor).addPathPatterns("/**")
                 // 排除一些路径
                 .excludePathPatterns("/user/login")
-                .excludePathPatterns("/**/**.html")
+                .excludePathPatterns("/**/login.html")
                 .excludePathPatterns("/css/**")
                 .excludePathPatterns("/js/**")
                 .excludePathPatterns("/pic/**");

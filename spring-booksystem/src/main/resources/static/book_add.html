@@ -70,13 +70,14 @@
                 url: "/book/addBook",
                 data: $("#addBook").serialize(),
                 success: function (result) {
-                    if (result == "") {
+                    console.log(result);
+                    if (result.code == 200 && result.data == "") {
                         // 图书添加成功
                         // alert("添加成功");
                         location.href = "book_list.html";
-                    }else {
+                    } else {
                         // 图书添加失败
-                        alert(result);
+                        alert(result.data);
                     }
                 }
 

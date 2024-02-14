@@ -62,9 +62,10 @@
         $.ajax({
             type: "get",
             url: "/book/queryBookById" + location.search,
-            success: function (book) {
-                console.log(book);
-                if (book != null) {
+            success: function (result) {
+                var book = result.data;
+                if (result.code == 200 && book != null) {
+                    console.log(book);
                     $("#bookId").val(book.id);
                     $("#bookName").val(book.bookName);
                     $("#bookAuthor").val(book.author);
@@ -81,7 +82,8 @@
                 url: "/book/updateBook",
                 data: $("#updateBook").serialize(),
                 success: function (result) {
-                    if (result == true) {
+                    console.log(result);
+                    if (result.code == 200 && result.data == true) {
                         // alert("更新成功");
                         location.href = "book_list.html"
                     } else {

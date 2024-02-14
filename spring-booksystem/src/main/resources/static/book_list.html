@@ -145,7 +145,7 @@
                             status: 0
                         },
                         success: function (result) {
-                            if (result == true) {
+                            if (result.code == 200 && result.data == true) {
                                 alert("删除成功");
                                 location.href = "book_list.html";
                             } else {
@@ -168,7 +168,7 @@
                         type: "post",
                         url: "/book/batchDelete?ids=" + ids,
                         success: function (result) {
-                            if (result == true) {
+                            if (result.code == 200 && result.data == true) {
                                 // alert("批量删除成功");
                                 location.href = "book_list.html";
                             } else {

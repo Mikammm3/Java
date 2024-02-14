@@ -23,8 +23,8 @@ public class BookController {
     private BookService bookService;
 
 
-    @RequestMapping("/addBook")
-    public String addBook(BookInfo bookInfo) {
+    @RequestMapping(value = "/addBook", produces = "application/json")
+    public Result addBook(BookInfo bookInfo) {
         log.info("添加图书，bookInfo:{}:", bookInfo);
         // 参数校验
         if (!StringUtils.hasLength(bookInfo.getBookName())
@@ -33,16 +33,16 @@ public class BookController {
                 || bookInfo.getCount() == null
                 || bookInfo.getPrice() == null
                 || bookInfo.getPrice().intValue() < 0) {
-            return "参数为空";
+            return Result.fail("参数为空");
         }
         // 添加图书
         try {
             bookService.insertBook(bookInfo);
         } catch (Exception e) {
             log.error("添加图书失败，e:{}", e);
-            return "内部发生错误，请联系管理员";
+            return Result.fail("内部发生错误，请联系管理员");
         }
-        return "";
+        return Result.success("");
     }
 
     @RequestMapping("/getListByPage")
@@ -74,20 +74,20 @@ public class BookController {
      * @return
      */
     @RequestMapping("/updateBook")
-    public boolean updateBook(BookInfo bookInfo) {
+    public Result updateBook(BookInfo bookInfo) {
         log.info("更新图书，updateBook:{}", bookInfo);
         // 参数校验
         if (bookInfo.getId() <= 0) {
-            return false;
+            return Result.fail(false, "非法 ID");
         }
         try {
             Integer result = bookService.updateBook(bookInfo);
-            if (result <= 0) return false;
+            if (result <= 0) return Result.fail(false, "更新失败");
         } catch (Exception e) {
             log.error("更新图书失败，e:{}", e);
-            return false;
+            return Result.fail(false, e.getMessage());
         }
-        return true;
+        return Result.success(true);
     }
 
     /**
