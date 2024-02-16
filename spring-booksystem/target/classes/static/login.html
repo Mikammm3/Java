@@ -11,27 +11,27 @@
 </head>
 
 <body>
-    <div class="container-login">
-        <div class="container-pic">
-            <img src="pic/computer.png" width="350px">
+<div class="container-login">
+    <div class="container-pic">
+        <img src="pic/computer.jpg" width="350px">
+    </div>
+    <div class="login-dialog">
+        <h3>登陆</h3>
+        <div class="row">
+            <span>用户名</span>
+            <input type="text" name="userName" id="userName" class="form-control">
         </div>
-        <div class="login-dialog">
-            <h3>登陆</h3>
-            <div class="row">
-                <span>用户名</span>
-                <input type="text" name="userName" id="userName" class="form-control">
-            </div>
-            <div class="row">
-                <span>密码</span>
-                <input type="password" name="password" id="password" class="form-control">
-            </div>
-            <div class="row">
-                <button type="button" class="btn btn-info btn-lg" onclick="login()">登录</button>
-            </div>
+        <div class="row">
+            <span>密码</span>
+            <input type="password" name="password" id="password" class="form-control">
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-info btn-lg" onclick="login()">登录</button>
         </div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
         function login() {
             $.ajax({
                 type: "post",
@@ -50,7 +50,8 @@
                 }
             });
         }
-    </script>
+
+</script>
 </body>
 
 </html>
