@@ -3,6 +3,7 @@ package com.mika.trans.controller;
 import com.mika.trans.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -86,7 +87,7 @@ public class TransactionalController {
         return "注册成功";
     }
 
-    @Transactional
+    @Transactional(isolation = Isolation.DEFAULT)
     @RequestMapping("/r7")
     public String r7(String userName, String password) throws IOException {
         Integer result = userService.insertUser(userName, password);
