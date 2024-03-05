@@ -40,8 +40,36 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script>
+        $(document).ajaxSend(function (e, xhr, opt) {
+            var user_token = localStorage.getItem("user_token");
+            xhr.setRequestHeader("user_token_header", user_token);
+        });
         function login() {
-            location.assign("blog_list.html");
+            // 发送 ajax 请求，获取 token
+            $.ajax({
+                type: "post",
+                url: "/user/login",
+                data: {
+                    "userName": $("#username").val(),
+                    "password": $("#password").val()
+                },
+                success: function (result) {
+                    console.log(result);
+                    if (result != null && result.code == 200 && result.data != null) {
+                        localStorage.setItem("user_token", result.data);
+                        location.href = "blog_list.html";
+                    } else {
+                        alert(result.errMsg);
+                    }
+
+                }
+                ,
+                error: function (result) {
+                    if (result != null) {
+                        alert(result.errMsg);
+                    }
+                }
+            });
         }
     </script>
 </body>
