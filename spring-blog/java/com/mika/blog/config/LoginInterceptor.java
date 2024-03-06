@@ -1,5 +1,6 @@
 package com.mika.blog.config;
 
+import com.mika.blog.constants.Constant;
 import com.mika.blog.utils.JwtUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -17,8 +18,8 @@ public class LoginInterceptor implements HandlerInterceptor {
         // 1. 从 header 中获取 token
         // 2. 校验 token
         // 3. 成功放行
-        String userToken = request.getHeader("user_token_header");
-        Boolean result = JwtUtils.parseToken(userToken);
+        String userToken = request.getHeader(Constant.USER_TOKEN_HEADER);
+        Boolean result = JwtUtils.checkToken(userToken);
         if (result) {
             return true;
         }

@@ -1,13 +1,10 @@
-package com.mika.blog.utils;
+package com.mika.blog;
 
-import com.mika.blog.constants.Constant;
-import com.mika.blog.model.UserInfo;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.io.Encoders;
 import io.jsonwebtoken.security.Keys;
-import lombok.extern.slf4j.Slf4j;
-
+import org.junit.jupiter.api.Test;
 
 import javax.crypto.SecretKey;
 import java.security.Key;
@@ -15,7 +12,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-@Slf4j
 public class JwtUtils {
 
     // 设置过期时间 1h
@@ -26,58 +22,40 @@ public class JwtUtils {
     private static final Key key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secretString));
 
     // 生成令牌
-    public static String genToken(UserInfo userInfo) {
+    @Test
+    public void genToken() {
         Map<String, Object> claim = new HashMap<>();
-        claim.put(Constant.USER_CLAIM_ID, userInfo.getId());
-        claim.put(Constant.USER_CLAIM_NAME, userInfo.getUserName());
-        claim.put(Constant.USER_CLAIM_GITHUB, userInfo.getGithubUrl());
+        claim.put("id", 8);
+        claim.put("name", "zhangsan");
 
         String token = Jwts.builder()
                 .setClaims(claim)
                 .signWith(key)
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_DATE))
                 .compact();
-        log.info("生成令牌 token: " + token);
-        return token;
+        System.out.println(token);
     }
 
     // 生成 key
-    public static void genKey() {
+    @Test
+    public void genKey() {
         // 生成 key
         SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
         String encode = Encoders.BASE64.encode(secretKey.getEncoded());
-        log.info("生成 encode: " + encode);
+        System.out.println(encode);
     }
 
     // 校验令牌
-    public static Boolean checkToken(String token) {
-        Claims claims = JwtUtils.parseClaim(token);
-        if (claims == null) return false;
-        log.info(claims.toString());
-        return true;
-    }
-
-    // 解析令牌
-    public static Claims parseClaim(String token) {
+    @Test
+    public void parseToken() {
+        String token = "eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiemhhbmdzYW4iLCJpZCI6OCwiZXhwIjoxNzA5NjE5NDA2fQ.kWi1bt-oO8fGzmzIzMbUxCv-QpDTagPI5GaAjLhulzc";
         JwtParser build = Jwts.parserBuilder().setSigningKey(key).build();
         Claims body = null;
         try {
             body = build.parseClaimsJws(token).getBody();
-        } catch (ExpiredJwtException e) {
-            log.error("token 过期, token: " + token);
         } catch (Exception e) {
-            log.error("令牌校验失败, token: " + token);
+            System.out.println("令牌校验失败");
         }
-        return body;
-    }
-
-
-    public static Integer getUserIdFromToken(String token) {
-        Claims claims = JwtUtils.parseClaim(token);
-        if (claims != null) {
-            log.info(claims.toString());
-            return (Integer) claims.get(Constant.USER_CLAIM_ID);
-        }
-        return null;
+        System.out.println(body);
     }
 }

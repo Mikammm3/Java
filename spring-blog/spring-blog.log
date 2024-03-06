@@ -1,289 +1,165 @@
-2024-03-04 12:01:25.995  INFO 19012 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 19012 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 12:01:25.997  INFO 19012 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 12:01:26.587  WARN 19012 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.mika.blog]' package. Please check your configuration.
-2024-03-04 12:01:27.127  INFO 19012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 12:01:27.137  INFO 19012 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 12:01:27.137  INFO 19012 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 12:01:27.275  INFO 19012 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 12:01:27.275  INFO 19012 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1234 ms
-2024-03-04 12:01:27.930  INFO 19012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 12:01:27.942  INFO 19012 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.491 seconds (JVM running for 2.947)
-2024-03-04 12:16:09.960  INFO 8916 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 8916 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 12:16:09.962  INFO 8916 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 12:16:10.424  WARN 8916 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.mika.blog]' package. Please check your configuration.
-2024-03-04 12:16:10.887  INFO 8916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 12:16:10.894  INFO 8916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 12:16:10.894  INFO 8916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 12:16:10.986  INFO 8916 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 12:16:10.986  INFO 8916 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 994 ms
-2024-03-04 12:16:11.468  INFO 8916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 12:16:11.478  INFO 8916 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 1.838 seconds (JVM running for 2.122)
-2024-03-04 12:16:37.706  INFO 8916 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 12:16:37.707  INFO 8916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 12:16:37.709  INFO 8916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-04 13:53:27.099  INFO 1776 --- [main] com.mika.blog.mapper.UserMapperTest      : Starting UserMapperTest using Java 1.8.0_192 on ib with PID 1776 (started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 13:53:27.100  INFO 1776 --- [main] com.mika.blog.mapper.UserMapperTest      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 13:53:28.766  INFO 1776 --- [main] com.mika.blog.mapper.UserMapperTest      : Started UserMapperTest in 1.947 seconds (JVM running for 2.703)
-2024-03-04 13:53:29.115  INFO 1776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 13:53:29.399  INFO 1776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 13:53:29.467  INFO 1776 --- [main] com.mika.blog.mapper.UserMapperTest      : UserInfo(id=1, userName=zhangsan, password=123, githubUrl=https://github.com/Mikammm3, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
-2024-03-04 13:53:29.482  INFO 1776 --- [main] com.mika.blog.mapper.UserMapperTest      : UserInfo(id=1, userName=zhangsan, password=123, githubUrl=https://github.com/Mikammm3, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
-2024-03-04 13:53:29.493  INFO 1776 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 13:53:29.501  INFO 1776 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 14:00:25.981  INFO 6660 --- [main] com.mika.blog.mapper.BlogMapperTest      : Starting BlogMapperTest using Java 1.8.0_192 on ib with PID 6660 (started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 14:00:25.982  INFO 6660 --- [main] com.mika.blog.mapper.BlogMapperTest      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 14:00:27.660  INFO 6660 --- [main] com.mika.blog.mapper.BlogMapperTest      : Started BlogMapperTest in 1.967 seconds (JVM running for 2.699)
-2024-03-04 14:00:27.943  INFO 6660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 14:00:28.187  INFO 6660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 14:00:28.272  INFO 6660 --- [main] com.mika.blog.mapper.BlogMapperTest      : [BlogInfo(id=1, title=第1篇博客, content=111我是博客正文我是博客正文我是博客正文, userId=1, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024), BlogInfo(id=2, title=第2篇博客, content=222我是博客正文我是博客正⽂我是博客正文, userId=2, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)]
-2024-03-04 14:00:28.301  INFO 6660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 14:00:28.312  INFO 6660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 14:00:50.994  INFO 12988 --- [main] com.mika.blog.mapper.BlogMapperTest      : Starting BlogMapperTest using Java 1.8.0_192 on ib with PID 12988 (started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 14:00:50.995  INFO 12988 --- [main] com.mika.blog.mapper.BlogMapperTest      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 14:00:52.562  INFO 12988 --- [main] com.mika.blog.mapper.BlogMapperTest      : Started BlogMapperTest in 1.811 seconds (JVM running for 2.515)
-2024-03-04 14:00:52.827  INFO 12988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 14:00:53.076  INFO 12988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 14:00:53.152  INFO 12988 --- [main] com.mika.blog.mapper.BlogMapperTest      : BlogInfo(id=1, title=第1篇博客, content=111我是博客正文我是博客正文我是博客正文, userId=1, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
-2024-03-04 14:00:53.171  INFO 12988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 14:00:53.178  INFO 12988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 14:01:19.526  INFO 14716 --- [main] com.mika.blog.mapper.BlogMapperTest      : Starting BlogMapperTest using Java 1.8.0_192 on ib with PID 14716 (started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 14:01:19.527  INFO 14716 --- [main] com.mika.blog.mapper.BlogMapperTest      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 14:01:21.228  INFO 14716 --- [main] com.mika.blog.mapper.BlogMapperTest      : Started BlogMapperTest in 1.95 seconds (JVM running for 2.669)
-2024-03-04 14:01:21.493  INFO 14716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 14:01:21.747  INFO 14716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 14:01:21.806  INFO 14716 --- [main] com.mika.blog.mapper.BlogMapperTest      : 1
-2024-03-04 14:01:21.831  INFO 14716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 14:01:21.841  INFO 14716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 14:02:13.734  INFO 9952 --- [main] com.mika.blog.mapper.BlogMapperTest      : Starting BlogMapperTest using Java 1.8.0_192 on ib with PID 9952 (started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 14:02:13.736  INFO 9952 --- [main] com.mika.blog.mapper.BlogMapperTest      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 14:02:15.368  INFO 9952 --- [main] com.mika.blog.mapper.BlogMapperTest      : Started BlogMapperTest in 1.905 seconds (JVM running for 2.616)
-2024-03-04 14:02:15.654  INFO 9952 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 14:02:15.903  INFO 9952 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 14:02:15.976  INFO 9952 --- [main] com.mika.blog.mapper.BlogMapperTest      : 1
-2024-03-04 14:02:16.005  INFO 9952 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 14:02:16.016  INFO 9952 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 14:02:52.337  INFO 4892 --- [main] com.mika.blog.mapper.BlogMapperTest      : Starting BlogMapperTest using Java 1.8.0_192 on ib with PID 4892 (started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 14:02:52.338  INFO 4892 --- [main] com.mika.blog.mapper.BlogMapperTest      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 14:02:53.992  INFO 4892 --- [main] com.mika.blog.mapper.BlogMapperTest      : Started BlogMapperTest in 1.898 seconds (JVM running for 2.621)
-2024-03-04 14:02:54.327  INFO 4892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 14:02:54.597  INFO 4892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 14:02:54.645  INFO 4892 --- [main] com.mika.blog.mapper.BlogMapperTest      : 1
-2024-03-04 14:02:54.661  INFO 4892 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 14:02:54.671  INFO 4892 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 14:04:07.907  INFO 10012 --- [main] com.mika.blog.mapper.BlogMapperTest      : Starting BlogMapperTest using Java 1.8.0_192 on ib with PID 10012 (started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 14:04:07.909  INFO 10012 --- [main] com.mika.blog.mapper.BlogMapperTest      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 14:04:09.501  INFO 10012 --- [main] com.mika.blog.mapper.BlogMapperTest      : Started BlogMapperTest in 1.847 seconds (JVM running for 2.564)
-2024-03-04 14:04:09.834  INFO 10012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 14:04:10.091  INFO 10012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 14:04:10.144  INFO 10012 --- [main] com.mika.blog.mapper.BlogMapperTest      : 1
-2024-03-04 14:04:10.161  INFO 10012 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 14:04:10.167  INFO 10012 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 14:04:30.589  INFO 6744 --- [main] com.mika.blog.mapper.BlogMapperTest      : Starting BlogMapperTest using Java 1.8.0_192 on ib with PID 6744 (started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 14:04:30.590  INFO 6744 --- [main] com.mika.blog.mapper.BlogMapperTest      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 14:04:32.194  INFO 6744 --- [main] com.mika.blog.mapper.BlogMapperTest      : Started BlogMapperTest in 1.88 seconds (JVM running for 2.583)
-2024-03-04 14:04:32.442  INFO 6744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 14:04:32.685  INFO 6744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 14:04:32.748  INFO 6744 --- [main] com.mika.blog.mapper.BlogMapperTest      : [BlogInfo(id=4, title=测试博客测试博客, content=3333333测试正文测试正文测试正文测试正文测试正文测试正文测试正文测试正文, userId=1, deleteFlag=0, createTime=Mon Mar 04 14:02:15 CST 2024, updateTime=Mon Mar 04 14:02:15 CST 2024), BlogInfo(id=1, title=第1篇博客, content=111我是博客正文我是博客正文我是博客正文, userId=1, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024), BlogInfo(id=2, title=第2篇博客, content=222我是博客正文我是博客正⽂我是博客正文, userId=2, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)]
-2024-03-04 14:04:32.768  INFO 6744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 14:04:32.776  INFO 6744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 14:14:28.299  INFO 4212 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 4212 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 14:14:28.301  INFO 4212 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 14:14:29.308  INFO 4212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 14:14:29.316  INFO 4212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 14:14:29.317  INFO 4212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 14:14:29.422  INFO 4212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 14:14:29.422  INFO 4212 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1087 ms
-2024-03-04 14:14:30.115  INFO 4212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 14:14:30.128  INFO 4212 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.194 seconds (JVM running for 2.492)
-2024-03-04 18:06:10.181  INFO 20400 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 20400 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 18:06:10.183  INFO 20400 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 18:06:11.185  INFO 20400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 18:06:11.194  INFO 20400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 18:06:11.194  INFO 20400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 18:06:11.297  INFO 20400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 18:06:11.298  INFO 20400 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1080 ms
-2024-03-04 18:06:11.929  INFO 20400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 18:06:11.939  INFO 20400 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.096 seconds (JVM running for 2.387)
-2024-03-04 18:06:50.508  INFO 20400 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 18:06:50.508  INFO 20400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 18:06:50.510  INFO 20400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-03-04 18:06:50.537  INFO 20400 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 18:06:50.649  INFO 20400 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 18:30:44.709  INFO 20400 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 18:30:44.718  INFO 20400 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 18:30:49.288  INFO 20252 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 20252 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 18:30:49.290  INFO 20252 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 18:30:50.244  INFO 20252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 18:30:50.251  INFO 20252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 18:30:50.252  INFO 20252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 18:30:50.355  INFO 20252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 18:30:50.355  INFO 20252 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1033 ms
-2024-03-04 18:30:51.025  INFO 20252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 18:30:51.037  INFO 20252 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.091 seconds (JVM running for 4.812)
-2024-03-04 18:31:02.759  INFO 20252 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 18:31:02.760  INFO 20252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 18:31:02.762  INFO 20252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-03-04 18:31:07.574  INFO 20252 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 18:31:07.888  INFO 20252 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 18:36:01.646  INFO 20252 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 18:36:01.669  INFO 20252 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 18:36:04.838  INFO 20236 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 20236 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 18:36:04.839  INFO 20236 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 18:36:05.848  INFO 20236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 18:36:05.856  INFO 20236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 18:36:05.857  INFO 20236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 18:36:05.954  INFO 20236 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 18:36:05.954  INFO 20236 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1078 ms
-2024-03-04 18:36:06.612  INFO 20236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 18:36:06.625  INFO 20236 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.116 seconds (JVM running for 2.4)
-2024-03-04 18:36:14.418  INFO 20236 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 18:36:14.419  INFO 20236 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 18:36:14.420  INFO 20236 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-03-04 18:36:14.505  INFO 20236 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 18:36:14.633  INFO 20236 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 18:38:31.672  INFO 20236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 18:38:31.703  INFO 20236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 18:38:34.438  INFO 20656 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 20656 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 18:38:34.441  INFO 20656 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 18:38:35.411  INFO 20656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 18:38:35.419  INFO 20656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 18:38:35.419  INFO 20656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 18:38:35.514  INFO 20656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 18:38:35.515  INFO 20656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1040 ms
-2024-03-04 18:38:36.179  INFO 20656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 18:38:36.187  INFO 20656 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.088 seconds (JVM running for 2.367)
-2024-03-04 18:38:41.240  INFO 20656 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 18:38:41.241  INFO 20656 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 18:38:41.242  INFO 20656 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-04 18:38:41.298  INFO 20656 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 18:38:41.413  INFO 20656 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 18:39:01.426  INFO 20656 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 18:39:01.452  INFO 20656 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 22:10:08.842  INFO 16472 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 16472 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 22:10:08.843  INFO 16472 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 22:10:09.883  INFO 16472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 22:10:09.892  INFO 16472 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 22:10:09.893  INFO 16472 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 22:10:10.005  INFO 16472 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 22:10:10.005  INFO 16472 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1128 ms
-2024-03-04 22:10:10.659  INFO 16472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 22:10:10.669  INFO 16472 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.147 seconds (JVM running for 2.556)
-2024-03-04 22:10:33.547  INFO 16472 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 22:10:33.547  INFO 16472 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 22:10:33.550  INFO 16472 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2024-03-04 22:10:36.318  INFO 16472 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 22:10:36.573  INFO 16472 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 22:11:31.002  INFO 16472 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 22:11:31.023  INFO 16472 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 22:12:35.728  INFO 18148 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 18148 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 22:12:35.729  INFO 18148 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 22:12:36.704  INFO 18148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 22:12:36.714  INFO 18148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 22:12:36.714  INFO 18148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 22:12:36.818  INFO 18148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 22:12:36.818  INFO 18148 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1055 ms
-2024-03-04 22:12:37.475  INFO 18148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 22:12:37.486  INFO 18148 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.081 seconds (JVM running for 2.36)
-2024-03-04 22:12:43.229  INFO 18148 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 22:12:43.229  INFO 18148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 22:12:43.230  INFO 18148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-04 22:12:43.357  INFO 18148 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 22:12:43.483  INFO 18148 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 22:13:00.868  INFO 18148 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 22:13:00.891  INFO 18148 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 22:17:13.489  INFO 19492 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 19492 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 22:17:13.491  INFO 19492 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 22:17:14.488  INFO 19492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 22:17:14.496  INFO 19492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 22:17:14.496  INFO 19492 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 22:17:14.593  INFO 19492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 22:17:14.593  INFO 19492 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1065 ms
-2024-03-04 22:17:15.300  INFO 19492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 22:17:15.308  INFO 19492 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.153 seconds (JVM running for 2.444)
-2024-03-04 22:17:21.828  INFO 19492 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 22:17:21.828  INFO 19492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 22:17:21.830  INFO 19492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-03-04 22:17:21.911  INFO 19492 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 22:17:22.037  INFO 19492 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 22:19:12.340  INFO 19492 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 22:19:12.357  INFO 19492 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 22:19:14.828  INFO 22780 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 22780 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 22:19:14.830  INFO 22780 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 22:19:15.864  INFO 22780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 22:19:15.873  INFO 22780 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 22:19:15.874  INFO 22780 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 22:19:15.974  INFO 22780 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 22:19:15.975  INFO 22780 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1110 ms
-2024-03-04 22:19:16.685  INFO 22780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 22:19:16.694  INFO 22780 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.187 seconds (JVM running for 2.476)
-2024-03-04 22:19:36.591  INFO 22780 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 22:19:36.594  INFO 22780 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 22:19:36.596  INFO 22780 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-03-04 22:19:36.746  INFO 22780 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 22:19:37.043  INFO 22780 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 22:21:59.969  INFO 22780 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 22:21:59.979  INFO 22780 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 22:22:03.072  INFO 10140 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 10140 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 22:22:03.075  INFO 10140 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 22:22:04.082  INFO 10140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 22:22:04.091  INFO 10140 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 22:22:04.091  INFO 10140 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 22:22:04.200  INFO 10140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 22:22:04.200  INFO 10140 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1092 ms
-2024-03-04 22:22:04.870  INFO 10140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 22:22:04.883  INFO 10140 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.139 seconds (JVM running for 2.427)
-2024-03-04 22:22:18.743  INFO 10140 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 22:22:18.743  INFO 10140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 22:22:18.744  INFO 10140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-04 22:22:18.826  INFO 10140 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 22:22:18.947  INFO 10140 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 22:22:49.358  INFO 10140 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 22:22:49.373  INFO 10140 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 22:22:52.425  INFO 11236 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 11236 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 22:22:52.427  INFO 11236 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 22:22:53.411  INFO 11236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 22:22:53.420  INFO 11236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 22:22:53.421  INFO 11236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 22:22:53.523  INFO 11236 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 22:22:53.524  INFO 11236 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1065 ms
-2024-03-04 22:22:54.199  INFO 11236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 22:22:54.210  INFO 11236 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.106 seconds (JVM running for 2.394)
-2024-03-04 22:23:01.057  INFO 11236 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 22:23:01.058  INFO 11236 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 22:23:01.060  INFO 11236 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-04 22:23:01.086  INFO 11236 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 22:23:01.198  INFO 11236 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 22:23:43.551  INFO 11236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 22:23:43.558  INFO 11236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 22:27:10.613  INFO 23220 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 23220 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 22:27:10.615  INFO 23220 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 22:27:11.648  INFO 23220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 22:27:11.656  INFO 23220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 22:27:11.656  INFO 23220 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 22:27:11.770  INFO 23220 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 22:27:11.770  INFO 23220 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1122 ms
-2024-03-04 22:27:12.472  INFO 23220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 22:27:12.482  INFO 23220 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.211 seconds (JVM running for 2.517)
-2024-03-04 22:27:55.808  INFO 23220 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 22:27:55.808  INFO 23220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 22:27:55.809  INFO 23220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-03-04 22:27:55.854  INFO 23220 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 22:27:55.976  INFO 23220 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 22:38:07.137  INFO 23220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 22:38:07.155  INFO 23220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-04 22:38:09.864  INFO 16664 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 16664 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
-2024-03-04 22:38:09.867  INFO 16664 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-03-04 22:38:11.198  INFO 16664 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-04 22:38:11.208  INFO 16664 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-04 22:38:11.208  INFO 16664 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-04 22:38:11.336  INFO 16664 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-04 22:38:11.336  INFO 16664 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1419 ms
-2024-03-04 22:38:12.216  INFO 16664 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-04 22:38:12.229  INFO 16664 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.802 seconds (JVM running for 3.173)
-2024-03-04 22:38:20.042  INFO 16664 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-04 22:38:20.043  INFO 16664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-04 22:38:20.045  INFO 16664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-04 22:38:20.147  INFO 16664 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-04 22:38:20.314  INFO 16664 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-04 22:40:29.359  INFO 16664 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-04 22:40:29.386  INFO 16664 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-06 13:28:28.092  INFO 25788 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 25788 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
+2024-03-06 13:28:28.100  INFO 25788 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-03-06 13:28:29.319  INFO 25788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-06 13:28:29.327  INFO 25788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-06 13:28:29.328  INFO 25788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-06 13:28:29.461  INFO 25788 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-06 13:28:29.462  INFO 25788 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1311 ms
+2024-03-06 13:28:30.254  INFO 25788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-06 13:28:30.266  INFO 25788 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.726 seconds (JVM running for 3.26)
+2024-03-06 13:28:35.557  INFO 25788 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 13:28:35.557  INFO 25788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-06 13:28:35.558  INFO 25788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-06 13:28:35.638 ERROR 25788 --- [http-nio-8080-exec-9] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 13:28:48.303  INFO 25788 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-06 13:28:48.569  INFO 25788 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-06 13:29:03.698 ERROR 25788 --- [http-nio-8080-exec-3] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 13:29:27.788  INFO 25788 --- [http-nio-8080-exec-4] com.mika.blog.utils.JwtUtils             : 生成令牌 token: eyJhbGciOiJIUzI1NiJ9.eyJnaXRodWJVcmwiOiJodHRwczovL2dpdGh1Yi5jb20vTWlrYW1tbTMiLCJuYW1lIjoiemhhbmdzYW4iLCJpZCI6MSwiZXhwIjoxNzA5NzA2NTY3fQ.GOxM5fp8wHkspbdZtauv3vsyxsZHPgOvbxsfPzCJFow
+2024-03-06 13:29:27.823 ERROR 25788 --- [http-nio-8080-exec-9] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 13:29:27.855  INFO 25788 --- [http-nio-8080-exec-7] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:30:37.699 ERROR 25788 --- [http-nio-8080-exec-3] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 13:31:13.419  INFO 25788 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-06 13:31:13.439  INFO 25788 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-06 13:31:18.194  INFO 23780 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 23780 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
+2024-03-06 13:31:18.196  INFO 23780 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-03-06 13:31:19.161  INFO 23780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-06 13:31:19.169  INFO 23780 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-06 13:31:19.170  INFO 23780 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-06 13:31:19.277  INFO 23780 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-06 13:31:19.277  INFO 23780 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1046 ms
+2024-03-06 13:31:19.976  INFO 23780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-06 13:31:19.989  INFO 23780 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.124 seconds (JVM running for 2.442)
+2024-03-06 13:31:25.526  INFO 23780 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 13:31:25.527  INFO 23780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-06 13:31:25.527  INFO 23780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-06 13:31:25.704 ERROR 23780 --- [http-nio-8080-exec-9] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 13:31:25.891  INFO 23780 --- [http-nio-8080-exec-6] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:31:25.909  INFO 23780 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-06 13:31:26.018  INFO 23780 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-06 13:31:51.940 ERROR 23780 --- [http-nio-8080-exec-1] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 13:34:33.993  INFO 23780 --- [http-nio-8080-exec-10] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:34:33.996  INFO 23780 --- [http-nio-8080-exec-10] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:35:58.902  INFO 23780 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-06 13:35:58.912  INFO 23780 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-06 13:36:02.278  INFO 3420 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 3420 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
+2024-03-06 13:36:02.280  INFO 3420 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-03-06 13:36:03.336  INFO 3420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-06 13:36:03.344  INFO 3420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-06 13:36:03.345  INFO 3420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-06 13:36:03.464  INFO 3420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-06 13:36:03.464  INFO 3420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1145 ms
+2024-03-06 13:36:04.173  INFO 3420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-06 13:36:04.185  INFO 3420 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.228 seconds (JVM running for 2.548)
+2024-03-06 13:36:12.416  INFO 3420 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 13:36:12.417  INFO 3420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-06 13:36:12.417  INFO 3420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-06 13:36:12.640  INFO 3420 --- [http-nio-8080-exec-1] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:36:12.647  INFO 3420 --- [http-nio-8080-exec-1] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:36:12.660  INFO 3420 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-06 13:36:12.791  INFO 3420 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-06 13:36:12.835  INFO 3420 --- [http-nio-8080-exec-1] com.mika.blog.controller.UserController  : getUserInfo, 获取 userInfo: UserInfo(id=1, userName=zhangsan, password=123, githubUrl=https://github.com/Mikammm3, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
+2024-03-06 13:36:50.029  INFO 3420 --- [http-nio-8080-exec-4] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:38:18.643  INFO 3420 --- [http-nio-8080-exec-10] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:38:18.647  INFO 3420 --- [http-nio-8080-exec-10] com.mika.blog.controller.UserController  : getAuthor, 获取 userInfo: UserInfo(id=2, userName=lisi, password=123, githubUrl=https://github.com/Mikammm3, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
+2024-03-06 13:55:25.381  INFO 3420 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-06 13:55:25.408  INFO 3420 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-06 13:55:29.300  INFO 18804 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 18804 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
+2024-03-06 13:55:29.302  INFO 18804 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-03-06 13:55:30.308  INFO 18804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-06 13:55:30.315  INFO 18804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-06 13:55:30.316  INFO 18804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-06 13:55:30.418  INFO 18804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-06 13:55:30.418  INFO 18804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1080 ms
+2024-03-06 13:55:31.117  INFO 18804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-06 13:55:31.132  INFO 18804 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.169 seconds (JVM running for 2.469)
+2024-03-06 13:55:37.435  INFO 18804 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 13:55:37.436  INFO 18804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-06 13:55:37.437  INFO 18804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-06 13:55:37.535 ERROR 18804 --- [http-nio-8080-exec-1] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 13:55:37.742  INFO 18804 --- [http-nio-8080-exec-10] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:55:37.742  INFO 18804 --- [http-nio-8080-exec-9] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:55:37.751  INFO 18804 --- [http-nio-8080-exec-10] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:55:37.762  INFO 18804 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-06 13:55:37.881  INFO 18804 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-06 13:55:37.931  INFO 18804 --- [http-nio-8080-exec-10] com.mika.blog.controller.UserController  : getUserInfo, 获取 userInfo: UserInfo(id=1, userName=zhangsan, password=123, githubUrl=https://github.com/Mikammm3, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
+2024-03-06 13:55:44.728 ERROR 18804 --- [http-nio-8080-exec-2] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 13:55:53.487  INFO 18804 --- [http-nio-8080-exec-2] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:55:53.487  INFO 18804 --- [http-nio-8080-exec-10] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:55:53.492  INFO 18804 --- [http-nio-8080-exec-2] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:55:53.500  INFO 18804 --- [http-nio-8080-exec-2] com.mika.blog.controller.UserController  : getUserInfo, 获取 userInfo: UserInfo(id=1, userName=zhangsan, password=123, githubUrl=https://github.com/Mikammm3, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
+2024-03-06 13:55:53.501 ERROR 18804 --- [http-nio-8080-exec-4] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 13:56:51.919  INFO 18804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-06 13:56:51.927  INFO 18804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-06 13:56:54.620  INFO 27312 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 27312 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
+2024-03-06 13:56:54.623  INFO 27312 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-03-06 13:56:55.757  INFO 27312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-06 13:56:55.766  INFO 27312 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-06 13:56:55.767  INFO 27312 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-06 13:56:55.893  INFO 27312 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-06 13:56:55.893  INFO 27312 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1230 ms
+2024-03-06 13:56:56.690  INFO 27312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-06 13:56:56.701  INFO 27312 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.435 seconds (JVM running for 2.76)
+2024-03-06 13:57:16.110  INFO 27312 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 13:57:16.111  INFO 27312 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-06 13:57:16.113  INFO 27312 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-06 13:57:16.271 ERROR 27312 --- [http-nio-8080-exec-4] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 13:57:16.771  INFO 27312 --- [http-nio-8080-exec-5] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:57:16.771  INFO 27312 --- [http-nio-8080-exec-3] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:57:16.796  INFO 27312 --- [http-nio-8080-exec-3] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 13:57:16.824  INFO 27312 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-06 13:57:17.124  INFO 27312 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-06 13:57:17.239  INFO 27312 --- [http-nio-8080-exec-3] com.mika.blog.controller.UserController  : getUserInfo, 获取 userInfo: UserInfo(id=1, userName=zhangsan, password=123, githubUrl=https://github.com/Mikammm3, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
+2024-03-06 13:57:27.813 ERROR 27312 --- [http-nio-8080-exec-2] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 13:58:46.654  INFO 27312 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-06 13:58:46.671  INFO 27312 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-06 14:01:26.889  INFO 18100 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 18100 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
+2024-03-06 14:01:26.891  INFO 18100 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-03-06 14:01:27.884  INFO 18100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-06 14:01:27.891  INFO 18100 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-06 14:01:27.892  INFO 18100 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-06 14:01:27.998  INFO 18100 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-06 14:01:27.998  INFO 18100 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1073 ms
+2024-03-06 14:01:28.664  INFO 18100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-06 14:01:28.678  INFO 18100 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.116 seconds (JVM running for 2.45)
+2024-03-06 14:01:34.404  INFO 18100 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 14:01:34.405  INFO 18100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-06 14:01:34.406  INFO 18100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-06 14:01:34.490 ERROR 18100 --- [http-nio-8080-exec-9] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 14:01:34.681  INFO 18100 --- [http-nio-8080-exec-2] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 14:01:34.681  INFO 18100 --- [http-nio-8080-exec-3] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 14:01:34.710  INFO 18100 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-06 14:01:34.823  INFO 18100 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-06 14:01:34.886  INFO 18100 --- [http-nio-8080-exec-3] com.mika.blog.controller.UserController  : getAuthor, 获取 userInfo: UserInfo(id=1, userName=zhangsan, password=123, githubUrl=https://github.com/Mikammm3, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
+2024-03-06 14:01:36.927 ERROR 18100 --- [http-nio-8080-exec-4] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 14:01:38.714  INFO 18100 --- [http-nio-8080-exec-8] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 14:01:38.714  INFO 18100 --- [http-nio-8080-exec-6] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 14:01:38.722 ERROR 18100 --- [http-nio-8080-exec-5] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 14:01:38.734  INFO 18100 --- [http-nio-8080-exec-8] com.mika.blog.controller.UserController  : getAuthor, 获取 userInfo: UserInfo(id=2, userName=lisi, password=123, githubUrl=https://github.com/Mikammm3, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
+2024-03-06 14:01:42.894 ERROR 18100 --- [http-nio-8080-exec-10] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 14:05:18.415  INFO 18100 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-06 14:05:18.432  INFO 18100 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-06 14:05:21.168  INFO 20304 --- [main] com.mika.blog.SpringBlogApplication      : Starting SpringBlogApplication using Java 1.8.0_192 on ib with PID 20304 (C:\Code\Java\spring-blog\target\classes started by 86135 in C:\Code\Java\spring-blog)
+2024-03-06 14:05:21.170  INFO 20304 --- [main] com.mika.blog.SpringBlogApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-03-06 14:05:22.109  INFO 20304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-06 14:05:22.119  INFO 20304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-06 14:05:22.119  INFO 20304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-06 14:05:22.232  INFO 20304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-06 14:05:22.233  INFO 20304 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1030 ms
+2024-03-06 14:05:22.926  INFO 20304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-06 14:05:22.941  INFO 20304 --- [main] com.mika.blog.SpringBlogApplication      : Started SpringBlogApplication in 2.082 seconds (JVM running for 2.378)
+2024-03-06 14:05:29.701  INFO 20304 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 14:05:29.702  INFO 20304 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-06 14:05:29.702  INFO 20304 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-06 14:05:29.789 ERROR 20304 --- [http-nio-8080-exec-1] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 14:05:29.988  INFO 20304 --- [http-nio-8080-exec-10] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 14:05:29.988  INFO 20304 --- [http-nio-8080-exec-9] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 14:05:29.997  INFO 20304 --- [http-nio-8080-exec-10] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 14:05:30.007  INFO 20304 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-06 14:05:30.131  INFO 20304 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-06 14:05:30.172  INFO 20304 --- [http-nio-8080-exec-10] com.mika.blog.controller.UserController  : getUserInfo, 获取 userInfo: UserInfo(id=1, userName=zhangsan, password=123, githubUrl=https://github.com/Mikammm3, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
+2024-03-06 14:05:33.747  INFO 20304 --- [http-nio-8080-exec-7] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 14:05:33.748 ERROR 20304 --- [http-nio-8080-exec-5] com.mika.blog.utils.JwtUtils             : 令牌校验失败, token: null
+2024-03-06 14:05:33.749  INFO 20304 --- [http-nio-8080-exec-4] com.mika.blog.utils.JwtUtils             : {githubUrl=https://github.com/Mikammm3, name=zhangsan, id=1, exp=1709706567}
+2024-03-06 14:05:33.778  INFO 20304 --- [http-nio-8080-exec-4] com.mika.blog.controller.UserController  : getAuthor, 获取 userInfo: UserInfo(id=2, userName=lisi, password=123, githubUrl=https://github.com/Mikammm3, deleteFlag=0, createTime=Mon Mar 04 11:50:14 CST 2024, updateTime=Mon Mar 04 11:50:14 CST 2024)
+2024-03-06 14:06:46.212  INFO 20304 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-06 14:06:46.233  INFO 20304 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
