@@ -44,6 +44,7 @@
             var user_token = localStorage.getItem("user_token");
             xhr.setRequestHeader("user_token_header", user_token);
         });
+        
         function login() {
             // 发送 ajax 请求，获取 token
             $.ajax({

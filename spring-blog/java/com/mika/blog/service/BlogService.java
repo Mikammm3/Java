@@ -25,4 +25,12 @@ public class BlogService {
     public BlogInfo getBlogById(Integer blogId) {
         return blogMapper.getBlogById(blogId);
     }
+
+    public Integer publishBlog(BlogInfo blogInfo) {
+        return blogMapper.insertBlog(blogInfo);
+    }
+
+    public Integer updateBlog(BlogInfo blogInfo) {
+        return blogMapper.updateBlog(blogInfo);
+    }
 }

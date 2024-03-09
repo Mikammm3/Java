@@ -27,6 +27,7 @@ public class UserController {
     // 登录接口
     @RequestMapping("/login")
     public Result login(String userName, String password) {
+        log.info("用户登录， userName: " + userName + ", password: " + password);
         // 1. 对参数进行校验
         // 2. 对密码进行校验
         // 3. 如果校验成功，生成 token

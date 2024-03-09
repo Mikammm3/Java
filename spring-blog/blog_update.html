@@ -41,41 +41,55 @@
 
         $(function () {
             var editor = editormd("editor", {
-                width  : "100%",
-                height : "550px",
+                width: "100%",
+                height: "550px",
                 path: "blog-editormd/lib/"
             });
         });
-        
+
         function submit() {
-            $.ajax({
-                type: "post",
-                url: "/blog/update",
-                contentType: "application/json",
-                data: JSON.stringify({
-                    "title": $("#title").val(),
-                    "content": $("#content").val(),
-                    "id": $("#blogId").val()
-                }),
-                success: function (result) {
-                    if (result != null && result.code == 200 && result.data == true) {
-                        location.href = "blog_list.html";
-                    } else {
-                        alert(result.msg);
-                        return;
-                    }
+            // $.ajax({
+            //     type: "post",
+            //     url: "/blog/update",
+            //     contentType: "application/json",
+            //     data: JSON.stringify({
+            //         "title": $("#title").val(),
+            //         "content": $("#content").val(),
+            //         "id": $("#blogId").val()
+            //     }),
+            //     success: function (result) {
+            //         if (result != null && result.code == 200 && result.data == true) {
+            //             location.href = "blog_list.html";
+            //         } else {
+            //             alert(result.msg);
+            //             return;
+            //         }
 
-                },
-                error: function (error) {
-                    if (error != null && error.status == 401) {
-                        alert("用户未登录, 登录后再进行对应操作");
-                    }
-                }
+            //     },
+            //     error: function (error) {
+            //         if (error != null && error.status == 401) {
+            //             alert("用户未登录, 登录后再进行对应操作");
+            //         }
+            //     }
 
-            });
+            // });
         }
         function getBlogInfo() {
-            
+            $.ajax({
+                type: "get",
+                url: "/blog/getBlogDetail" + location.search,
+                success: function (result) {
+                    console.log(result);
+                    if (result.code == 200 && result.data != null) {
+                        var blog = result.data;
+                        $("#title").text(blog.title);
+                        $("#content").text(blog.content);
+                    } else {
+                        alert("该博客不存在");
+                    }
+                }
+            });
+
         }
         getBlogInfo();
     </script>

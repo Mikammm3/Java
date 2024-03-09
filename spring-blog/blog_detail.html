@@ -42,11 +42,11 @@
             <div class="content">
                 <div class="title"></div>
                 <div class="date"></div>
-                <div class="detail"></div>
-                <div class="operating">
+                <div class="detail" id="detail" style="background-color: transparent;"></div>
+                <!-- <div class="operating">
                     <button onclick="window.location.href='blog_update.html'">编辑</button>
                     <button onclick="deleteBlog()">删除</button>
-                </div>
+                </div> -->
             </div>
 
         </div>
@@ -69,7 +69,21 @@
                     var blog = result.data;
                     $(".right .content .title").text(blog.title);
                     $(".right .content .date").text(blog.createTime);
-                    $(".right .content .detail").text(blog.content);
+                    // $(".right .content .detail").text(blog.content);
+                    editormd.markdownToHTML("detail", {
+                        markdown: blog.content
+                    });
+                    // 是否显示编辑和删除按钮
+                    if (blog.isLoginUser == true) {
+                        var html = "";
+                        html += '<div class="operating">';
+                        html += '<button onclick="window.location.href=\'blog_update.html' + location.search + '\'">编辑</button>';
+                        html += '<button onclick="deleteBlog()">删除</button>';
+                        html += '</div>';
+
+                        $(".content").append(html);
+                    }
+
                 } else {
                     alert("该博客不存在");
                 }
@@ -77,12 +91,9 @@
         });
 
         // //显示博客作者信息
-        // var userUrl = "/user/getAuthor" + location.search;
-        // getUserInfo(userUrl);
-
         var url = "/user/getAuthor" + location.search;
         getUserInfo(url);
-        
+
         function deleteBlog() {
             alert("删除博客");
         }

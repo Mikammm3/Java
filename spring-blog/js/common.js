@@ -22,3 +22,8 @@ function getUserInfo(url) {
         }
     });
 }
+
+function logout() {
+    localStorage.removeItem("user_token");
+    location.href = "blog_login.html";
+}

@@ -66,7 +66,7 @@ public class JwtUtils {
         } catch (ExpiredJwtException e) {
             log.error("token 过期, token: " + token);
         } catch (Exception e) {
-            log.error("令牌校验失败, token: " + token);
+            log.error("令牌校验失败, token: " + token + ", e:{}", e);
         }
         return body;
     }
