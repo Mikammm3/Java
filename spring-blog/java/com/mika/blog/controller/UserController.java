@@ -6,6 +6,7 @@ import com.mika.blog.model.UserInfo;
 import com.mika.blog.service.BlogService;
 import com.mika.blog.service.UserService;
 import com.mika.blog.utils.JwtUtils;
+import com.mika.blog.utils.SecurityUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -36,7 +37,8 @@ public class UserController {
         }
         UserInfo userInfo = userService.getUserByName(userName);
         if (userInfo == null || userInfo.getId() < 1) return Result.fail("用户名或密码错误");
-        if (password.equals(userInfo.getPassword())) {
+        // 密码校验
+        if (SecurityUtils.verify(password, userInfo.getPassword())) {
             // 密码正确，生成 token
             return Result.success(JwtUtils.genToken(userInfo));
         }

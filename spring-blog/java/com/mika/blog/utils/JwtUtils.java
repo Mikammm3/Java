@@ -53,7 +53,7 @@ public class JwtUtils {
     public static Boolean checkToken(String token) {
         Claims claims = JwtUtils.parseClaim(token);
         if (claims == null) return false;
-        log.info(claims.toString());
+//        log.info(claims.toString());
         return true;
     }
 
@@ -75,7 +75,7 @@ public class JwtUtils {
     public static Integer getUserIdFromToken(String token) {
         Claims claims = JwtUtils.parseClaim(token);
         if (claims != null) {
-            log.info(claims.toString());
+//            log.info(claims.toString());
             return (Integer) claims.get(Constant.USER_CLAIM_ID);
         }
         return null;

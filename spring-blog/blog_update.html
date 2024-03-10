@@ -39,40 +39,24 @@
     <script src="js/common.js"></script>
     <script type="text/javascript">
 
-        $(function () {
-            var editor = editormd("editor", {
-                width: "100%",
-                height: "550px",
-                path: "blog-editormd/lib/"
-            });
-        });
-
         function submit() {
-            // $.ajax({
-            //     type: "post",
-            //     url: "/blog/update",
-            //     contentType: "application/json",
-            //     data: JSON.stringify({
-            //         "title": $("#title").val(),
-            //         "content": $("#content").val(),
-            //         "id": $("#blogId").val()
-            //     }),
-            //     success: function (result) {
-            //         if (result != null && result.code == 200 && result.data == true) {
-            //             location.href = "blog_list.html";
-            //         } else {
-            //             alert(result.msg);
-            //             return;
-            //         }
-
-            //     },
-            //     error: function (error) {
-            //         if (error != null && error.status == 401) {
-            //             alert("用户未登录, 登录后再进行对应操作");
-            //         }
-            //     }
-
-            // });
+            $.ajax({
+                type: "post",
+                url: "/blog/updateBlog",
+                data: {
+                    title: $("#title").val(),
+                    blogId: $("#blogId").val(),
+                    content: $("#content").val()
+                },
+                success: function (result) {
+                    if (result.code == 200 && result.data == true) {
+                        alert("更新成功");
+                        location.href = "blog_list.html";
+                    } else {
+                        alert("更新失败，请联系管理员");
+                    }
+                }
+            });
         }
         function getBlogInfo() {
             $.ajax({
@@ -82,8 +66,19 @@
                     console.log(result);
                     if (result.code == 200 && result.data != null) {
                         var blog = result.data;
-                        $("#title").text(blog.title);
-                        $("#content").text(blog.content);
+                        $("#title").val(blog.title);
+                        $("#blogId").val(blog.id);
+                        // $("#content").val(blog.content);
+                        editormd("editor", {
+                            width: "100%",
+                            height: "550px",
+                            path: "blog-editormd/lib/",
+                            onload: function () {
+                                this.watch();
+                                this.setMarkdown(blog.content);
+                            }
+                        });
+
                     } else {
                         alert("该博客不存在");
                     }

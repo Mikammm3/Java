@@ -90,12 +90,26 @@
             }
         });
 
-        // //显示博客作者信息
+        // 显示博客作者信息
         var url = "/user/getAuthor" + location.search;
         getUserInfo(url);
 
         function deleteBlog() {
-            alert("删除博客");
+            if (confirm("确定删除这篇博客吗?")) {
+                $.ajax({
+                    type: "post",
+                    url: "/blog/deleteBlog" + location.search,
+                    success: function (result) {
+                        if (result.code == 200 && result.data == true) {
+                            alert("删除成功");
+                            location.href = "blog_list.html";
+                        } else {
+                            alert("删除失败，请联系管理员");
+                        }
+                    }
+                });
+            }
+
         }
     </script>
 </body>

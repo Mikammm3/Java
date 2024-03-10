@@ -29,6 +29,7 @@ public class BlogController {
 
     @RequestMapping("/getBlogDetail")
     public BlogInfo getBlogDetail(Integer blogId, HttpServletRequest request) {
+        log.info("getBlogDetail, 接收参数： blogId: " + blogId);
         BlogInfo blogInfo = blogService.getBlogById(blogId);
         if (blogInfo == null) return null;
         String token = request.getHeader(Constant.USER_TOKEN_HEADER);
