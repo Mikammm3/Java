@@ -1,93 +1,102 @@
-2024-03-22 19:05:18.792  INFO 17420 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 17420 (C:\Code\Java\ChatRoom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
-2024-03-22 19:05:18.794  INFO 17420 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-03-22 19:05:19.471  WARN 17420 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.mika.chatroom]' package. Please check your configuration.
-2024-03-22 19:05:20.007  INFO 17420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-22 19:05:20.017  INFO 17420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-22 19:05:20.017  INFO 17420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-22 19:05:20.143  INFO 17420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-22 19:05:20.143  INFO 17420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1305 ms
-2024-03-22 19:05:20.700  WARN 17420 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
-2024-03-22 19:05:20.704  INFO 17420 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-03-22 19:05:20.717  INFO 17420 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2024-03-22 19:05:20.748 ERROR 17420 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2024-03-22 19:13:22.436  INFO 18556 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 18556 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
-2024-03-22 19:13:22.438  INFO 18556 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-03-22 19:13:22.923  WARN 18556 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.mika.chatroom]' package. Please check your configuration.
-2024-03-22 19:13:23.404  INFO 18556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-22 19:13:23.413  INFO 18556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-22 19:13:23.413  INFO 18556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-22 19:13:23.518  INFO 18556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-22 19:13:23.519  INFO 18556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1044 ms
-2024-03-22 19:13:24.058  INFO 18556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-22 19:13:24.070  INFO 18556 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 1.987 seconds (JVM running for 2.323)
-2024-03-22 20:52:40.819  INFO 15372 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 15372 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
-2024-03-22 20:52:40.822  INFO 15372 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-03-22 20:52:42.061  INFO 15372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-22 20:52:42.074  INFO 15372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-22 20:52:42.075  INFO 15372 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-22 20:52:42.225  INFO 15372 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-22 20:52:42.225  INFO 15372 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1359 ms
-2024-03-22 20:52:43.044  INFO 15372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-22 20:52:43.057  INFO 15372 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.61 seconds (JVM running for 2.944)
-2024-03-22 20:53:34.423  INFO 15372 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-22 20:53:34.423  INFO 15372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-22 20:53:34.459  INFO 15372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 36 ms
-2024-03-22 20:53:34.556  INFO 15372 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-22 20:53:34.851  INFO 15372 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-22 20:53:34.939 ERROR 15372 --- [http-nio-8080-exec-1] c.m.chatroom.controller.UserController   : 登录失败！用户名或密码错误! useUser(userId=2, userName=zhangsan, password=) 
-2024-03-22 20:55:08.044  INFO 15372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-22 20:55:08.054  INFO 15372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-22 20:55:11.155  INFO 8952 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 8952 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
-2024-03-22 20:55:11.157  INFO 8952 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-03-22 20:55:12.129  INFO 8952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-22 20:55:12.137  INFO 8952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-22 20:55:12.137  INFO 8952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-22 20:55:12.234  INFO 8952 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-22 20:55:12.234  INFO 8952 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1040 ms
-2024-03-22 20:55:12.924  INFO 8952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-22 20:55:12.933  INFO 8952 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.111 seconds (JVM running for 2.4)
-2024-03-22 20:55:20.648  INFO 8952 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-22 20:55:20.648  INFO 8952 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-22 20:55:20.649  INFO 8952 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-22 20:55:20.682  INFO 8952 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-22 20:55:20.807  INFO 8952 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-22 20:55:46.297 ERROR 8952 --- [http-nio-8080-exec-4] c.m.chatroom.controller.UserController   : 登录失败！用户名或密码错误! useUser(userId=2, userName=zhangsan, password=123) 
-2024-03-22 21:01:05.450 ERROR 8952 --- [http-nio-8080-exec-6] c.m.chatroom.controller.UserController   : 登录失败！用户名或密码错误! useUser(userId=2, userName=zhangsan, password=123) 
-2024-03-22 21:08:16.715 ERROR 8952 --- [http-nio-8080-exec-1] c.m.chatroom.controller.UserController   : e:{}
+2024-03-23 00:06:16.178  INFO 13984 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 13984 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 00:06:16.185  INFO 13984 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 00:06:17.592  INFO 13984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 00:06:17.603  INFO 13984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 00:06:17.613  INFO 13984 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 00:06:17.780  INFO 13984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 00:06:17.780  INFO 13984 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1538 ms
+2024-03-23 00:06:18.697  INFO 13984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 00:06:18.713  INFO 13984 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.971 seconds (JVM running for 3.373)
+2024-03-23 00:06:18.845  INFO 13984 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 00:06:18.845  INFO 13984 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 00:06:18.847  INFO 13984 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-23 00:06:34.036  INFO 13984 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-23 00:06:34.352  INFO 13984 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-23 00:06:34.450 ERROR 13984 --- [http-nio-8080-exec-5] c.m.chatroom.controller.UserController   : 登录失败！用户名或密码错误! useUser(userId=2, userName=zhangsan, password=123) 
+2024-03-23 00:09:13.118  INFO 13984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-23 00:09:13.137  INFO 13984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-23 00:11:27.256  INFO 18352 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 18352 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 00:11:27.258  INFO 18352 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 00:11:28.720  INFO 18352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 00:11:28.730  INFO 18352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 00:11:28.731  INFO 18352 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 00:11:28.855  INFO 18352 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 00:11:28.856  INFO 18352 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1543 ms
+2024-03-23 00:11:29.699  INFO 18352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 00:11:29.711  INFO 18352 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.89 seconds (JVM running for 3.286)
+2024-03-23 00:11:43.825  INFO 18352 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 00:11:43.825  INFO 18352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 00:11:43.827  INFO 18352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 00:25:38.271  INFO 16012 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 16012 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 00:25:38.274  INFO 16012 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 00:25:40.192  INFO 16012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 00:25:40.208  INFO 16012 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 00:25:40.208  INFO 16012 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 00:25:40.378  INFO 16012 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 00:25:40.379  INFO 16012 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2049 ms
+2024-03-23 00:25:41.549  INFO 16012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 00:25:41.568  INFO 16012 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 3.833 seconds (JVM running for 4.368)
+2024-03-23 00:25:42.539  INFO 16012 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 00:25:42.539  INFO 16012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 00:25:42.540  INFO 16012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 00:26:33.521  INFO 10940 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 10940 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 00:26:33.524  INFO 10940 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 00:26:35.140  INFO 10940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 00:26:35.152  INFO 10940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 00:26:35.152  INFO 10940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 00:26:35.318  INFO 10940 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 00:26:35.318  INFO 10940 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1739 ms
+2024-03-23 00:26:36.295  INFO 10940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 00:26:36.311  INFO 10940 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 3.358 seconds (JVM running for 3.834)
+2024-03-23 00:26:37.682  INFO 10940 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 00:26:37.683  INFO 10940 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 00:26:37.684  INFO 10940 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 00:28:07.306  INFO 13004 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 13004 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 00:28:07.310  INFO 13004 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 00:28:08.970  INFO 13004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 00:28:08.983  INFO 13004 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 00:28:08.984  INFO 13004 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 00:28:09.175  INFO 13004 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 00:28:09.176  INFO 13004 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1813 ms
+2024-03-23 00:28:10.162  INFO 13004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 00:28:10.177  INFO 13004 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 3.388 seconds (JVM running for 3.838)
+2024-03-23 00:28:10.930  INFO 13004 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 00:28:10.930  INFO 13004 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 00:28:10.931  INFO 13004 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-23 09:57:47.459  INFO 16616 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 16616 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 09:57:47.463  INFO 16616 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 09:57:48.624  INFO 16616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 09:57:48.634  INFO 16616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 09:57:48.635  INFO 16616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 09:57:48.780  INFO 16616 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 09:57:48.780  INFO 16616 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1270 ms
+2024-03-23 09:57:49.462  INFO 16616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 09:57:49.473  INFO 16616 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.486 seconds (JVM running for 2.862)
+2024-03-23 09:58:02.117  INFO 16616 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 09:58:02.117  INFO 16616 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 09:58:02.119  INFO 16616 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 09:58:02.212  INFO 16616 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-23 09:58:02.546  INFO 16616 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-23 09:58:02.742 ERROR 16616 --- [http-nio-8080-exec-2] c.m.chatroom.controller.UserController   : e:{}
 
 org.springframework.dao.DuplicateKeyException: 
-### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'lisi' for key 'user_name'
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'wangwu' for key 'user_name'
 ### The error may exist in com/mika/chatroom/mapper/UserMapper.java (best guess)
 ### The error may involve com.mika.chatroom.mapper.UserMapper.insert-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into user(user_name,password) values (?,?)
-### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'lisi' for key 'user_name'
-; Duplicate entry 'lisi' for key 'user_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'lisi' for key 'user_name'
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'wangwu' for key 'user_name'
+; Duplicate entry 'wangwu' for key 'user_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'wangwu' for key 'user_name'
 	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:244) ~[spring-jdbc-5.3.30.jar:5.3.30]
 	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[spring-jdbc-5.3.30.jar:5.3.30]
 	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92) ~[mybatis-spring-2.1.1.jar:2.1.1]
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439) ~[mybatis-spring-2.1.1.jar:2.1.1]
-	at com.sun.proxy.$Proxy58.insert(Unknown Source) ~[na:na]
+	at com.sun.proxy.$Proxy59.insert(Unknown Source) ~[na:na]
 	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272) ~[mybatis-spring-2.1.1.jar:2.1.1]
 	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.13.jar:3.5.13]
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142) ~[mybatis-3.5.13.jar:3.5.13]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.13.jar:3.5.13]
-	at com.sun.proxy.$Proxy59.insert(Unknown Source) ~[na:na]
+	at com.sun.proxy.$Proxy60.insert(Unknown Source) ~[na:na]
 	at com.mika.chatroom.service.UserService.insert(UserService.java:14) ~[classes/:na]
 	at com.mika.chatroom.controller.UserController.register(UserController.java:30) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_192]
@@ -103,8 +112,8 @@ org.springframework.dao.DuplicateKeyException:
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) [spring-webmvc-5.3.30.jar:5.3.30]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) [spring-webmvc-5.3.30.jar:5.3.30]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) [tomcat-embed-core-9.0.82.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.30.jar:5.3.30]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) [tomcat-embed-core-9.0.82.jar:4.0.FR]
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.30.jar:5.3.30]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) [tomcat-embed-core-9.0.82.jar:4.0.FR]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) [tomcat-embed-core-9.0.82.jar:9.0.82]
@@ -140,7 +149,7 @@ org.springframework.dao.DuplicateKeyException:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.82.jar:9.0.82]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.82.jar:9.0.82]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_192]
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'lisi' for key 'user_name'
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'wangwu' for key 'user_name'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118) ~[mysql-connector-j-8.0.33.jar:8.0.33]
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.33.jar:8.0.33]
@@ -152,7 +161,7 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'l
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_192]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_192]
 	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58) ~[mybatis-3.5.13.jar:3.5.13]
-	at com.sun.proxy.$Proxy69.execute(Unknown Source) ~[na:na]
+	at com.sun.proxy.$Proxy70.execute(Unknown Source) ~[na:na]
 	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.13.jar:3.5.13]
 	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.13.jar:3.5.13]
 	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.13.jar:3.5.13]
@@ -167,24 +176,533 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'l
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-2.1.1.jar:2.1.1]
 	... 58 common frames omitted
 
-2024-03-22 21:08:56.409  INFO 8952 --- [http-nio-8080-exec-2] c.m.chatroom.controller.UserController   : register, result: 1
-2024-03-22 21:17:14.317  INFO 8952 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-22 21:17:14.329  INFO 8952 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-22 21:17:17.509  INFO 6876 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 6876 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
-2024-03-22 21:17:17.511  INFO 6876 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-03-22 21:17:18.521  INFO 6876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-22 21:17:18.529  INFO 6876 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-22 21:17:18.530  INFO 6876 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2024-03-22 21:17:18.640  INFO 6876 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-22 21:17:18.640  INFO 6876 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1090 ms
-2024-03-22 21:17:19.257  INFO 6876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-22 21:17:19.266  INFO 6876 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.094 seconds (JVM running for 2.405)
-2024-03-22 21:17:32.394  INFO 6876 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-22 21:17:32.394  INFO 6876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-22 21:17:32.395  INFO 6876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-22 21:17:32.442  INFO 6876 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-22 21:17:32.588  INFO 6876 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-22 21:17:32.632 ERROR 6876 --- [http-nio-8080-exec-1] c.m.chatroom.controller.UserController   : 登录失败！用户名或密码错误! usenull 
-2024-03-22 21:17:49.852  INFO 6876 --- [http-nio-8080-exec-2] c.m.chatroom.controller.UserController   : register, result: 1
-2024-03-22 21:21:12.323  INFO 6876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-22 21:21:12.344  INFO 6876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-23 09:58:16.494 ERROR 16616 --- [http-nio-8080-exec-8] c.m.chatroom.controller.UserController   : e:{}
+
+org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'zhaoliu' for key 'user_name'
+### The error may exist in com/mika/chatroom/mapper/UserMapper.java (best guess)
+### The error may involve com.mika.chatroom.mapper.UserMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into user(user_name,password) values (?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'zhaoliu' for key 'user_name'
+; Duplicate entry 'zhaoliu' for key 'user_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'zhaoliu' for key 'user_name'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:244) ~[spring-jdbc-5.3.30.jar:5.3.30]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[spring-jdbc-5.3.30.jar:5.3.30]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92) ~[mybatis-spring-2.1.1.jar:2.1.1]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439) ~[mybatis-spring-2.1.1.jar:2.1.1]
+	at com.sun.proxy.$Proxy59.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272) ~[mybatis-spring-2.1.1.jar:2.1.1]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.13.jar:3.5.13]
+	at com.sun.proxy.$Proxy60.insert(Unknown Source) ~[na:na]
+	at com.mika.chatroom.service.UserService.insert(UserService.java:14) ~[classes/:na]
+	at com.mika.chatroom.controller.UserController.register(UserController.java:30) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_192]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) [spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) [spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) [spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) [spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) [spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.30.jar:5.3.30]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) [tomcat-embed-core-9.0.82.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.30.jar:5.3.30]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) [tomcat-embed-core-9.0.82.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.30.jar:5.3.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.30.jar:5.3.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.30.jar:5.3.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_192]
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'zhaoliu' for key 'user_name'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_192]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58) ~[mybatis-3.5.13.jar:3.5.13]
+	at com.sun.proxy.$Proxy70.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.13.jar:3.5.13]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_192]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-2.1.1.jar:2.1.1]
+	... 58 common frames omitted
+
+2024-03-23 09:58:25.559  INFO 16616 --- [http-nio-8080-exec-3] c.m.chatroom.controller.UserController   : register, result: 1
+2024-03-23 10:24:20.871  WARN 16616 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=23m18s163ms60µs500ns).
+2024-03-23 10:25:29.693  INFO 16616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-23 10:25:29.708  INFO 16616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-23 11:40:07.799  INFO 17976 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 17976 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 11:40:07.802  INFO 17976 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 11:40:08.844  INFO 17976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 11:40:08.855  INFO 17976 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 11:40:08.856  INFO 17976 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 11:40:08.965  INFO 17976 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 11:40:08.965  INFO 17976 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1122 ms
+2024-03-23 11:40:09.648  INFO 17976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 11:40:09.663  INFO 17976 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.233 seconds (JVM running for 2.539)
+2024-03-23 11:40:16.033  INFO 17976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 11:40:16.034  INFO 17976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 11:40:16.035  INFO 17976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 11:44:52.171  INFO 13948 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 13948 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 11:44:52.173  INFO 13948 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 11:44:53.226  INFO 13948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 11:44:53.236  INFO 13948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 11:44:53.236  INFO 13948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 11:44:53.354  INFO 13948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 11:44:53.355  INFO 13948 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1145 ms
+2024-03-23 11:44:53.992  INFO 13948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 11:44:54.003  INFO 13948 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.18 seconds (JVM running for 2.47)
+2024-03-23 11:45:02.566  INFO 13948 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 11:45:02.568  INFO 13948 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 11:45:02.569  INFO 13948 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-23 11:59:26.870  INFO 12484 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 12484 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 11:59:26.873  INFO 12484 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 11:59:27.914  INFO 12484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 11:59:27.925  INFO 12484 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 11:59:27.925  INFO 12484 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 11:59:28.036  INFO 12484 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 11:59:28.037  INFO 12484 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1128 ms
+2024-03-23 11:59:28.760  INFO 12484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 11:59:28.769  INFO 12484 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.249 seconds (JVM running for 4.8)
+2024-03-23 11:59:30.390  INFO 12484 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 11:59:30.390  INFO 12484 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 11:59:30.391  INFO 12484 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 12:03:13.082  INFO 18964 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 18964 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 12:03:13.084  INFO 18964 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 12:03:14.064  INFO 18964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 12:03:14.074  INFO 18964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 12:03:14.074  INFO 18964 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 12:03:14.184  INFO 18964 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 12:03:14.184  INFO 18964 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1064 ms
+2024-03-23 12:03:14.793  INFO 18964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 12:03:14.802  INFO 18964 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.064 seconds (JVM running for 2.348)
+2024-03-23 12:03:17.407  INFO 18964 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 12:03:17.407  INFO 18964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 12:03:17.408  INFO 18964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 12:12:16.214  INFO 11984 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 11984 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 12:12:16.217  INFO 11984 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 12:12:17.262  INFO 11984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 12:12:17.271  INFO 11984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 12:12:17.272  INFO 11984 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 12:12:17.371  INFO 11984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 12:12:17.371  INFO 11984 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1119 ms
+2024-03-23 12:12:18.055  INFO 11984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 12:12:18.064  INFO 11984 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.2 seconds (JVM running for 2.502)
+2024-03-23 12:12:25.812  INFO 11984 --- [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 12:12:25.813  INFO 11984 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 12:12:25.814  INFO 11984 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 12:20:34.894  INFO 6768 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 6768 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 12:20:34.897  INFO 6768 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 12:20:35.860  INFO 6768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 12:20:35.869  INFO 6768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 12:20:35.870  INFO 6768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 12:20:35.969  INFO 6768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 12:20:35.969  INFO 6768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1037 ms
+2024-03-23 12:20:36.597  INFO 6768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 12:20:36.609  INFO 6768 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.045 seconds (JVM running for 2.334)
+2024-03-23 12:20:42.054  INFO 6768 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 12:20:42.054  INFO 6768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 12:20:42.055  INFO 6768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-23 12:23:47.396  INFO 22976 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 22976 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 12:23:47.398  INFO 22976 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 12:23:48.421  INFO 22976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 12:23:48.428  INFO 22976 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 12:23:48.428  INFO 22976 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 12:23:48.536  INFO 22976 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 12:23:48.538  INFO 22976 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1108 ms
+2024-03-23 12:23:49.204  INFO 22976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 12:23:49.214  INFO 22976 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.166 seconds (JVM running for 2.46)
+2024-03-23 12:23:52.512  INFO 22976 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 12:23:52.512  INFO 22976 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 12:23:52.514  INFO 22976 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-23 12:31:33.653  INFO 23284 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 23284 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 12:31:33.655  INFO 23284 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 12:31:34.594  INFO 23284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 12:31:34.603  INFO 23284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 12:31:34.604  INFO 23284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 12:31:34.705  INFO 23284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 12:31:34.706  INFO 23284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1018 ms
+2024-03-23 12:31:35.314  INFO 23284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 12:31:35.325  INFO 23284 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 1.993 seconds (JVM running for 2.272)
+2024-03-23 12:31:40.844  INFO 23284 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 12:31:40.845  INFO 23284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 12:31:40.845  INFO 23284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-23 12:38:29.321  INFO 20140 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 20140 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 12:38:29.324  INFO 20140 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 12:38:30.333  INFO 20140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 12:38:30.342  INFO 20140 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 12:38:30.342  INFO 20140 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 12:38:30.448  INFO 20140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 12:38:30.448  INFO 20140 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1092 ms
+2024-03-23 12:38:31.158  INFO 20140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 12:38:31.168  INFO 20140 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.184 seconds (JVM running for 2.505)
+2024-03-23 12:38:33.846  INFO 20140 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 12:38:33.847  INFO 20140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 12:38:33.848  INFO 20140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 12:45:38.102  INFO 21968 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 21968 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 12:45:38.104  INFO 21968 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 12:45:39.093  INFO 21968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 12:45:39.101  INFO 21968 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 12:45:39.101  INFO 21968 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 12:45:39.200  INFO 21968 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 12:45:39.200  INFO 21968 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1062 ms
+2024-03-23 12:45:39.886  INFO 21968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 12:45:39.896  INFO 21968 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.124 seconds (JVM running for 4.579)
+2024-03-23 12:45:40.041  INFO 21968 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 12:45:40.041  INFO 21968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 12:45:40.042  INFO 21968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 12:47:54.622  INFO 22280 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 22280 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 12:47:54.624  INFO 22280 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 12:47:55.595  INFO 22280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 12:47:55.603  INFO 22280 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 12:47:55.603  INFO 22280 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 12:47:55.707  INFO 22280 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 12:47:55.708  INFO 22280 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1048 ms
+2024-03-23 12:47:56.386  INFO 22280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 12:47:56.396  INFO 22280 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.124 seconds (JVM running for 2.411)
+2024-03-23 12:47:59.067  INFO 22280 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 12:47:59.067  INFO 22280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 12:47:59.069  INFO 22280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-23 13:06:09.078  INFO 21012 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 21012 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:06:09.080  INFO 21012 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:06:10.136  INFO 21012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:06:10.144  INFO 21012 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:06:10.145  INFO 21012 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:06:10.253  INFO 21012 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:06:10.253  INFO 21012 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1137 ms
+2024-03-23 13:06:10.968  INFO 21012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:06:10.983  INFO 21012 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.241 seconds (JVM running for 2.535)
+2024-03-23 13:06:18.087  INFO 21012 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:06:18.087  INFO 21012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:06:18.087  INFO 21012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-23 13:07:38.189  INFO 14732 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 14732 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:07:38.191  INFO 14732 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:07:39.173  INFO 14732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:07:39.185  INFO 14732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:07:39.186  INFO 14732 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:07:39.288  INFO 14732 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:07:39.289  INFO 14732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1062 ms
+2024-03-23 13:07:39.878  INFO 14732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:07:39.891  INFO 14732 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.046 seconds (JVM running for 2.345)
+2024-03-23 13:07:40.118  INFO 14732 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:07:40.119  INFO 14732 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:07:40.119  INFO 14732 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-23 13:13:38.990  INFO 14744 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 14744 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:13:38.992  INFO 14744 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:13:40.013  INFO 14744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:13:40.023  INFO 14744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:13:40.023  INFO 14744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:13:40.124  INFO 14744 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:13:40.124  INFO 14744 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1093 ms
+2024-03-23 13:13:40.777  INFO 14744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:13:40.786  INFO 14744 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.134 seconds (JVM running for 2.432)
+2024-03-23 13:13:42.132  INFO 14744 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:13:42.132  INFO 14744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:13:42.133  INFO 14744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 13:25:34.843  INFO 23084 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 23084 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:25:34.845  INFO 23084 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:25:35.967  INFO 23084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:25:35.975  INFO 23084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:25:35.976  INFO 23084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:25:36.085  INFO 23084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:25:36.086  INFO 23084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1205 ms
+2024-03-23 13:25:36.736  INFO 23084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:25:36.746  INFO 23084 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.232 seconds (JVM running for 2.52)
+2024-03-23 13:25:42.270  INFO 23084 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:25:42.271  INFO 23084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:25:42.272  INFO 23084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 13:31:37.143  INFO 24344 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 24344 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:31:37.145  INFO 24344 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:31:38.169  INFO 24344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:31:38.177  INFO 24344 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:31:38.177  INFO 24344 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:31:38.297  INFO 24344 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:31:38.298  INFO 24344 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1116 ms
+2024-03-23 13:31:38.925  INFO 24344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:31:38.936  INFO 24344 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.177 seconds (JVM running for 2.492)
+2024-03-23 13:31:57.148  INFO 24344 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:31:57.149  INFO 24344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:31:57.149  INFO 24344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-23 13:32:34.663  INFO 7696 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 7696 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:32:34.666  INFO 7696 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:32:35.635  INFO 7696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:32:35.643  INFO 7696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:32:35.644  INFO 7696 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:32:35.744  INFO 7696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:32:35.745  INFO 7696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1038 ms
+2024-03-23 13:32:36.377  INFO 7696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:32:36.391  INFO 7696 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.063 seconds (JVM running for 2.379)
+2024-03-23 13:32:39.426  INFO 7696 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:32:39.428  INFO 7696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:32:39.428  INFO 7696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-23 13:37:52.895  INFO 6120 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 6120 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:37:52.897  INFO 6120 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:37:53.857  INFO 6120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:37:53.866  INFO 6120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:37:53.866  INFO 6120 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:37:53.966  INFO 6120 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:37:53.967  INFO 6120 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1036 ms
+2024-03-23 13:37:54.572  INFO 6120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:37:54.584  INFO 6120 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.017 seconds (JVM running for 2.301)
+2024-03-23 13:38:00.628  INFO 6120 --- [http-nio-8080-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:38:00.629  INFO 6120 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:38:00.630  INFO 6120 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 13:39:16.270  INFO 20396 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 20396 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:39:16.272  INFO 20396 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:39:17.287  INFO 20396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:39:17.295  INFO 20396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:39:17.296  INFO 20396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:39:17.402  INFO 20396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:39:17.403  INFO 20396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1097 ms
+2024-03-23 13:39:18.144  INFO 20396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:39:18.154  INFO 20396 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.25 seconds (JVM running for 2.55)
+2024-03-23 13:39:19.595  INFO 20396 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:39:19.595  INFO 20396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:39:19.597  INFO 20396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-23 13:40:09.638  INFO 5360 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 5360 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:40:09.640  INFO 5360 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:40:10.594  INFO 5360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:40:10.604  INFO 5360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:40:10.604  INFO 5360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:40:10.709  INFO 5360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:40:10.710  INFO 5360 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1035 ms
+2024-03-23 13:40:11.391  INFO 5360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:40:11.400  INFO 5360 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.102 seconds (JVM running for 2.394)
+2024-03-23 13:40:13.418  INFO 5360 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:40:13.418  INFO 5360 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:40:13.419  INFO 5360 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 13:40:39.706  INFO 5656 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 5656 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:40:39.708  INFO 5656 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:40:40.682  INFO 5656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:40:40.690  INFO 5656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:40:40.691  INFO 5656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:40:40.798  INFO 5656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:40:40.799  INFO 5656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1057 ms
+2024-03-23 13:40:41.409  INFO 5656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:40:41.419  INFO 5656 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.047 seconds (JVM running for 2.334)
+2024-03-23 13:40:43.364  INFO 5656 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:40:43.365  INFO 5656 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:40:43.366  INFO 5656 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 13:41:37.619  INFO 24488 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 24488 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:41:37.621  INFO 24488 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:41:38.603  INFO 24488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:41:38.610  INFO 24488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:41:38.611  INFO 24488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:41:38.721  INFO 24488 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:41:38.721  INFO 24488 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1064 ms
+2024-03-23 13:41:39.384  INFO 24488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:41:39.393  INFO 24488 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.099 seconds (JVM running for 2.389)
+2024-03-23 13:41:44.715  INFO 24488 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:41:44.716  INFO 24488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:41:44.717  INFO 24488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 13:42:33.711  INFO 5208 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 5208 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:42:33.713  INFO 5208 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:42:34.744  INFO 5208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:42:34.752  INFO 5208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:42:34.753  INFO 5208 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:42:34.862  INFO 5208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:42:34.862  INFO 5208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1109 ms
+2024-03-23 13:42:35.533  INFO 5208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:42:35.546  INFO 5208 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.163 seconds (JVM running for 2.456)
+2024-03-23 13:42:36.180  INFO 5208 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:42:36.180  INFO 5208 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:42:36.181  INFO 5208 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 13:43:06.001  INFO 16120 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 16120 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 13:43:06.004  INFO 16120 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 13:43:07.027  INFO 16120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 13:43:07.036  INFO 16120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 13:43:07.037  INFO 16120 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 13:43:07.147  INFO 16120 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 13:43:07.147  INFO 16120 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1110 ms
+2024-03-23 13:43:07.827  INFO 16120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 13:43:07.836  INFO 16120 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.193 seconds (JVM running for 2.479)
+2024-03-23 13:43:08.091  INFO 16120 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 13:43:08.091  INFO 16120 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 13:43:08.092  INFO 16120 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-23 14:00:31.887  INFO 23420 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 23420 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 14:00:31.889  INFO 23420 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 14:00:32.857  INFO 23420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 14:00:32.866  INFO 23420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 14:00:32.866  INFO 23420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 14:00:32.971  INFO 23420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 14:00:32.971  INFO 23420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1045 ms
+2024-03-23 14:00:33.607  INFO 23420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 14:00:33.616  INFO 23420 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.061 seconds (JVM running for 2.352)
+2024-03-23 14:00:39.395  INFO 23420 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 14:00:39.396  INFO 23420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 14:00:39.398  INFO 23420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 14:01:00.167  INFO 4620 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 4620 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 14:01:00.169  INFO 4620 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 14:01:01.121  INFO 4620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 14:01:01.133  INFO 4620 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 14:01:01.133  INFO 4620 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 14:01:01.240  INFO 4620 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 14:01:01.241  INFO 4620 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1038 ms
+2024-03-23 14:01:01.909  INFO 4620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 14:01:01.920  INFO 4620 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.08 seconds (JVM running for 2.364)
+2024-03-23 14:01:07.142  INFO 4620 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 14:01:07.142  INFO 4620 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 14:01:07.143  INFO 4620 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 14:13:46.623  INFO 20020 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 20020 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 14:13:46.625  INFO 20020 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 14:13:47.562  INFO 20020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 14:13:47.569  INFO 20020 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 14:13:47.570  INFO 20020 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 14:13:47.669  INFO 20020 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 14:13:47.669  INFO 20020 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1011 ms
+2024-03-23 14:13:48.310  INFO 20020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 14:13:48.321  INFO 20020 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.02 seconds (JVM running for 2.311)
+2024-03-23 14:13:55.768  INFO 20020 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 14:13:55.768  INFO 20020 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 14:13:55.769  INFO 20020 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 14:22:18.201  INFO 21704 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 21704 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 14:22:18.203  INFO 21704 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 14:22:19.130  INFO 21704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 14:22:19.138  INFO 21704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 14:22:19.139  INFO 21704 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 14:22:19.239  INFO 21704 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 14:22:19.239  INFO 21704 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1003 ms
+2024-03-23 14:22:19.871  INFO 21704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 14:22:19.879  INFO 21704 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 1.991 seconds (JVM running for 2.265)
+2024-03-23 14:22:24.679  INFO 21704 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 14:22:24.679  INFO 21704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 14:22:24.680  INFO 21704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 14:40:36.359  INFO 14208 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 14208 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 14:40:36.361  INFO 14208 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 14:40:37.457  INFO 14208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 14:40:37.465  INFO 14208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 14:40:37.465  INFO 14208 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 14:40:37.577  INFO 14208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 14:40:37.578  INFO 14208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1184 ms
+2024-03-23 14:40:38.247  INFO 14208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 14:40:38.257  INFO 14208 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.236 seconds (JVM running for 2.539)
+2024-03-23 14:40:39.467  INFO 14208 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 14:40:39.467  INFO 14208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 14:40:39.468  INFO 14208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 14:41:26.325  INFO 18792 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 18792 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 14:41:26.327  INFO 18792 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 14:41:27.307  INFO 18792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 14:41:27.316  INFO 18792 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 14:41:27.317  INFO 18792 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 14:41:27.425  INFO 18792 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 14:41:27.425  INFO 18792 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1062 ms
+2024-03-23 14:41:28.067  INFO 18792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 14:41:28.080  INFO 18792 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.096 seconds (JVM running for 2.415)
+2024-03-23 14:41:32.959  INFO 18792 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 14:41:32.960  INFO 18792 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 14:41:32.961  INFO 18792 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 15:16:44.414  INFO 19032 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 19032 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 15:16:44.415  INFO 19032 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 15:16:45.408  INFO 19032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 15:16:45.416  INFO 19032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 15:16:45.417  INFO 19032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 15:16:45.529  INFO 19032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 15:16:45.530  INFO 19032 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1076 ms
+2024-03-23 15:16:46.197  INFO 19032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 15:16:46.209  INFO 19032 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.127 seconds (JVM running for 2.423)
+2024-03-23 15:16:48.285  INFO 19032 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 15:16:48.285  INFO 19032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 15:16:48.286  INFO 19032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 15:16:48.371 ERROR 19032 --- [http-nio-8080-exec-8] c.m.chatroom.controller.UserController   : 用户未登录!
+2024-03-23 15:17:00.547  INFO 19032 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-23 15:17:00.872  INFO 19032 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-23 15:52:38.518  INFO 19032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-23 15:52:38.521  INFO 19032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-23 16:42:19.944  INFO 22168 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 22168 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 16:42:19.946  INFO 22168 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 16:42:20.907  INFO 22168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 16:42:20.915  INFO 22168 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 16:42:20.916  INFO 22168 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 16:42:21.025  INFO 22168 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 16:42:21.025  INFO 22168 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1043 ms
+2024-03-23 16:42:21.696  INFO 22168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 16:42:21.708  INFO 22168 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.096 seconds (JVM running for 2.401)
+2024-03-23 16:42:34.733  INFO 22168 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 16:42:34.734  INFO 22168 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 16:42:34.736  INFO 22168 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 16:42:34.814  INFO 22168 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-23 16:42:35.128  INFO 22168 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-23 16:45:42.798  INFO 22168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-23 16:45:42.807  INFO 22168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-23 16:45:45.787  INFO 14536 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 14536 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 16:45:45.790  INFO 14536 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 16:45:46.830  INFO 14536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 16:45:46.838  INFO 14536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 16:45:46.838  INFO 14536 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 16:45:46.941  INFO 14536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 16:45:46.942  INFO 14536 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1116 ms
+2024-03-23 16:45:47.601  INFO 14536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 16:45:47.615  INFO 14536 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.169 seconds (JVM running for 2.462)
+2024-03-23 16:46:05.463  INFO 14536 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 16:46:05.463  INFO 14536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 16:46:05.463  INFO 14536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-23 16:46:05.526 ERROR 14536 --- [http-nio-8080-exec-5] c.m.c.controller.FriendController        : 用户未登录!
+2024-03-23 16:46:05.526 ERROR 14536 --- [http-nio-8080-exec-4] c.m.chatroom.controller.UserController   : 用户未登录!
+2024-03-23 16:46:13.070  INFO 14536 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-23 16:46:13.422  INFO 14536 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-23 18:20:56.088  INFO 14536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-23 18:20:56.102  INFO 14536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-23 20:42:08.263  INFO 16436 --- [main] com.mika.chatroom.ChatRoomApplication    : Starting ChatRoomApplication using Java 1.8.0_192 on ib with PID 16436 (C:\Code\Java\chatroom\target\classes started by 86135 in C:\Code\Java\ChatRoom)
+2024-03-23 20:42:08.266  INFO 16436 --- [main] com.mika.chatroom.ChatRoomApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-03-23 20:42:09.393  INFO 16436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-23 20:42:09.404  INFO 16436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-23 20:42:09.404  INFO 16436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-03-23 20:42:09.515  INFO 16436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-23 20:42:09.515  INFO 16436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1216 ms
+2024-03-23 20:42:10.193  INFO 16436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-23 20:42:10.206  INFO 16436 --- [main] com.mika.chatroom.ChatRoomApplication    : Started ChatRoomApplication in 2.295 seconds (JVM running for 4.69)
+2024-03-23 20:42:12.640  INFO 16436 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-23 20:42:12.640  INFO 16436 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-23 20:42:12.641  INFO 16436 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-23 20:42:12.728 ERROR 16436 --- [http-nio-8080-exec-10] c.m.c.controller.FriendController        : 用户未登录!
+2024-03-23 20:42:12.728 ERROR 16436 --- [http-nio-8080-exec-1] c.m.chatroom.controller.UserController   : 用户未登录!
+2024-03-23 20:42:24.367  INFO 16436 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-23 20:42:24.672  INFO 16436 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.

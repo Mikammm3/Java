@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Slf4j
 @RestController
@@ -51,5 +52,21 @@ public class UserController {
         }
         log.error("登录失败！用户名或密码错误! use{} ", user);
         return null;
+    }
+
+    @RequestMapping("/getUserInfo")
+    public User getUserInfo(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            log.error("用户未登录!");
+            return null;
+        }
+        User user = (User) session.getAttribute(Constant.USER_SESSION);
+        if (user == null) {
+            log.error("获取 user 对象失败！");
+            return null;
+        }
+        user.setPassword("");
+        return user;
     }
 }
