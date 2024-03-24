@@ -15,7 +15,7 @@ function initSwitchTab() {
     //    同时把会话列表显示出来, 把好友列表隐藏
     //    如果是点击 好友标签按钮, 就把好友标签按钮的背景图片进行设置. 
     //    同时把好友列表显示出来, 把会话列表进行隐藏
-    tabSession.onclick = function() {
+    tabSession.onclick = function () {
         // a) 设置图标
         tabSession.style.backgroundImage = 'url(img/对话.png)';
         tabFriend.style.backgroundImage = 'url(img/用户2.png)';
@@ -24,7 +24,7 @@ function initSwitchTab() {
         lists[1].classList = 'list hide';
     }
 
-    tabFriend.onclick = function() {
+    tabFriend.onclick = function () {
         // a) 设置图标
         tabSession.style.backgroundImage = 'url(img/对话2.png)';
         tabFriend.style.backgroundImage = 'url(img/用户.png)'
@@ -44,11 +44,11 @@ initSwitchTab();
 // let websocket = new WebSocket("ws://127.0.0.1:8080/WebSocketMessage");
 let websocket = new WebSocket("ws://" + location.host + "/WebSocketMessage");
 
-websocket.onopen = function() {
+websocket.onopen = function () {
     console.log("websocket 连接成功!");
 }
 
-websocket.onmessage = function(e) {
+websocket.onmessage = function (e) {
     console.log("websocket 收到消息! " + e.data);
     // 此时收到的 e.data 是个 json 字符串, 需要转成 js 对象
     let resp = JSON.parse(e.data);
@@ -61,11 +61,11 @@ websocket.onmessage = function(e) {
     }
 }
 
-websocket.onclose = function() {
+websocket.onclose = function () {
     console.log("websocket 连接关闭!");
 }
 
-websocket.onerror = function() {
+websocket.onerror = function () {
     console.log("websocket 连接异常!");
 }
 
@@ -84,7 +84,7 @@ function handleMessage(resp) {
         curSessionLi.innerHTML = '<h3>' + resp.fromName + '</h3>'
             + '<p></p>';
         // 给这个 li 标签也加上点击事件的处理
-        curSessionLi.onclick = function() {
+        curSessionLi.onclick = function () {
             clickSession(curSessionLi);
         }
     }
@@ -132,7 +132,7 @@ function initSendButton() {
     let sendButton = document.querySelector('.right .ctrl button');
     let messageInput = document.querySelector('.right .message-input');
     // 2. 给发送按钮注册一个点击事件
-    sendButton.onclick = function() {
+    sendButton.onclick = function () {
         // a) 先针对输入框的内容做个简单判定. 比如输入框内容为空, 则啥都不干
         if (!messageInput.value) {
             // value 的值是 null 或者 '' 都会触发这个条件
@@ -171,7 +171,7 @@ function getUserInfo() {
     $.ajax({
         type: 'get',
         url: '/user/getUserInfo',
-        success: function(result) {
+        success: function (result) {
             // 从服务器获取到数据. 
             // 校验结果是否有效. 
             if (result != null && result.userId > 0) {
@@ -195,7 +195,7 @@ function getFriendList() {
     $.ajax({
         type: 'get',
         url: '/friend/getFriendList',
-        success: function(body) {
+        success: function (body) {
             // 1. 先把之前的好友列表的内容, 给清空
             let friendListUL = document.querySelector('#friend-list');
             friendListUL.innerHTML = '';
@@ -209,13 +209,13 @@ function getFriendList() {
                 friendListUL.appendChild(li);
 
                 // 每个 li 标签, 就对应界面上的一个好友的选项. 给这个 li 加上点击事件的处理. 
-                li.onclick = function() {
+                li.onclick = function () {
                     // 参数表示区分了当前用户点击的是哪个好友. 
                     clickFriend(friend);
                 }
             }
         },
-        error: function() {
+        error: function () {
             console.log('获取好友列表失败!');
         }
     });
@@ -226,11 +226,12 @@ getFriendList();
 function getSessionList() {
     $.ajax({
         type: 'get',
-        url: 'sessionList',
-        success: function(body) {
+        url: '/messageSession/getSessionList',
+        success: function (body) {
             // 1. 清空之前的会话列表
             let sessionListUL = document.querySelector('#session-list');
             sessionListUL.innerHTML = '';
+            if (body == null) return;
             // 2. 遍历响应的数组, 针对结果来构造页面
             for (let session of body) {
                 // 针对 lastMessage 的长度进行截断处理
@@ -241,12 +242,12 @@ function getSessionList() {
                 let li = document.createElement('li');
                 // 把会话 id 保存到 li 标签的自定义属性中. 
                 li.setAttribute('message-session-id', session.sessionId);
-                li.innerHTML = '<h3>' + session.friends[0].friendName + '</h3>' 
+                li.innerHTML = '<h3>' + session.friends[0].friendName + '</h3>'
                     + '<p>' + session.lastMessage + '</p>';
                 sessionListUL.appendChild(li);
 
                 // 给 li 标签新增点击事件
-                li.onclick = function() {
+                li.onclick = function () {
                     // 这个写法, 就能保证, 点击哪个 li 标签
                     // 此处对应的 clickSession 函数的参数就能拿到哪个 li 标签. 
                     clickSession(li);
@@ -298,8 +299,8 @@ function getHistoryMessage(sessionId) {
     // 3. 发送 ajax 请求给服务器, 获取到该会话的历史消息. 
     $.ajax({
         type: 'get',
-        url: 'message?sessionId=' + sessionId,
-        success: function(body) {
+        url: '/message/getMessageList?sessionId=' + sessionId,
+        success: function (body) {
             // 此处返回的 body 是个 js 对象数组, 里面的每个元素都是一条消息. 
             // 直接遍历即可. 
             for (let message of body) {
@@ -323,7 +324,7 @@ function addMessage(messageShowDiv, message) {
         // 消息是别人发的. 靠左
         messageDiv.className = 'message message-left';
     }
-    messageDiv.innerHTML = '<div class="box">' 
+    messageDiv.innerHTML = '<div class="box">'
         + '<h4>' + message.fromName + '</h4>'
         + '<p>' + message.content + '</p>'
         + '</div>';
@@ -362,7 +363,7 @@ function clickFriend(friend) {
         sessionLi.innerHTML = '<h3>' + friend.friendName + '</h3>' + '<p></p>';
         //    把标签进行置顶
         sessionListUL.insertBefore(sessionLi, sessionListUL.children[0]);
-        sessionLi.onclick = function() {
+        sessionLi.onclick = function () {
             clickSession(sessionLi);
         }
         sessionLi.click();
@@ -393,12 +394,16 @@ function findSessionByName(username) {
 function createSession(friendId, sessionLi) {
     $.ajax({
         type: 'post',
-        url: 'session?toUserId=' + friendId,
-        success: function(body) {
-            console.log("会话创建成功! sessionId = " + body.sessionId);
-            sessionLi.setAttribute('message-session-id', body.sessionId);
-        }, 
-        error: function() {
+        url: '/messageSession/createSession?toUserId=' + friendId,
+        success: function (body) {
+            if (body == null) {
+                alert("创建会话失败");
+                return;
+            }
+            console.log("会话创建成功! sessionId = " + body);
+            sessionLi.setAttribute('message-session-id', body);
+        },
+        error: function () {
             console.log('会话创建失败!');
         }
     });

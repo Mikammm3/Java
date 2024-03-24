@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mika.chatroom.mapper.MessageSessionMapper">
+
+    <select id="getFriendBySessionId" resultType="com.mika.chatroom.model.Friend">
+        select msu.user_id as friendId , u.user_name as friendName from message_session_user msu,user u
+        where msu.session_id = #{sessionId}
+        and msu.user_id != #{userId} and u.user_id = msu.user_id;
+    </select>
+
+</mapper>
