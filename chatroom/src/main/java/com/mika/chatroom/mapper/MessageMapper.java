@@ -1,6 +1,7 @@
 package com.mika.chatroom.mapper;
 
 import com.mika.chatroom.model.Message;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -20,4 +21,8 @@ public interface MessageMapper {
             " from message m, user u" +
             " where m.session_id = #{sessionId} and m.from_id = u.user_id order by m.post_time desc limit 100")
     List<Message> getMessageListBySessionId(Integer sessionId);
+
+
+    @Insert("insert into message(from_id,session_id,content) values(#{fromId},#{sessionId},#{content})")
+    Integer insertMessage(Message message);
 }

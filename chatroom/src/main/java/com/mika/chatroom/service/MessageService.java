@@ -21,4 +21,8 @@ public class MessageService {
     public List<Message> getMessageListBySessionId(Integer sessionId) {
         return mapper.getMessageListBySessionId(sessionId);
     }
+
+    public Integer insertMessage(Message message) {
+        return mapper.insertMessage(message);
+    }
 }
