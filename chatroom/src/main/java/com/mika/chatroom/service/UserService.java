@@ -5,6 +5,8 @@ import com.mika.chatroom.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
     @Autowired
@@ -16,5 +18,10 @@ public class UserService {
 
     public User selectByName(String userName) {
         return userMapper.selectByName(userName);
+    }
+
+
+    public List<User> getUsersByName(String userName) {
+        return userMapper.getUsersByName(userName);
     }
 }

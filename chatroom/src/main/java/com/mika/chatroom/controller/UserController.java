@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -68,5 +69,16 @@ public class UserController {
         }
         user.setPassword("");
         return user;
+    }
+
+
+    @RequestMapping("/getUsersByName")
+    public List<User> getUsersByName(String userName) {
+        log.info("[getUsersByName] userName: " + userName);
+        if (!StringUtils.hasLength(userName)) {
+            log.error("[getUsersByName] userName == null");
+            return null;
+        }
+        return userService.getUsersByName(userName);
     }
 }

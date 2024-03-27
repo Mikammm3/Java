@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.List;
+
 @Mapper
 public interface UserMapper {
     @Options(useGeneratedKeys = true, keyProperty = "userId")
@@ -14,4 +16,8 @@ public interface UserMapper {
 
     @Select("select * from user where user_name = #{userName}")
     User selectByName(String userName);
+
+
+    // 模糊查询
+    List<User> getUsersByName(String userName);
 }

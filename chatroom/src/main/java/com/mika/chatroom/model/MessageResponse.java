@@ -22,4 +22,6 @@ public class MessageResponse {
         this.sessionId = sessionId;
         this.content = content;
     }
+
+
 }

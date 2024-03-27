@@ -61,11 +61,82 @@ public class WebSocketHandler extends TextWebSocketHandler {
         if (request.getType().equals("message")) {
             // 进行消息转发
             transferMessage(user, request);
+        } else if (request.getType().equals("addFriendRequire")) {
+            // 处理显示好友申请
+            AddFriendRequest req = objectMapper.readValue(message.getPayload(), AddFriendRequest.class);
+            req.setFromId(user.getUserId());
+            sendAddFriendRequire(user, req);
+
+        } else if (request.getType().equals("acceptAddFriendRequire")) {
+            // 处理接受好友申请
+            AddFriendRequest req = objectMapper.readValue(message.getPayload(), AddFriendRequest.class);
+            req.setType("acceptAddFriendRequire");
+            acceptAddFriendRequire(req);
+        } else if (request.getType().equals("rejectAddFriendRequire")) {
+            // 处理拒绝好友申请
+            AddFriendRequest req = objectMapper.readValue(message.getPayload(), AddFriendRequest.class);
+            req.setType("rejectAddFriendRequire");
+            rejectAddFriendRequire(req);
         } else {
             log.error("消息类型有误! " + message.getPayload());
         }
 
     }
+
+    // 这里实现实时提示接受好友请求
+    private void acceptAddFriendRequire(AddFriendRequest req) throws IOException {
+        log.info("[acceptAddFriendRequire]  req: " + req);
+        // 1. 先构建一个待转发的响应对象，AddFriendResponse
+        AddFriendResponse response = new AddFriendResponse(req.getFromId(), req.getFriendName());
+        response.setType("acceptAddFriendRequire");
+        // 把这个 Java 对象转成 json 格式字符串
+        String respJson = objectMapper.writeValueAsString(response);
+        // 3. 给用户都发一份响应消息
+        WebSocketSession webSocketSession = onlineUserManager.getWebSocketSessionById(response.getFromId());
+        if (webSocketSession == null) {
+            // 如果用户不在线，则不发送
+            return;
+        }
+        log.info("[acceptAddFriendRequire] respJson: " + respJson);
+        webSocketSession.sendMessage(new TextMessage(respJson));
+    }
+
+    // 这里实现实时提示拒绝好友请求
+    private void rejectAddFriendRequire(AddFriendRequest req) throws IOException {
+        log.info("[rejectAddFriendRequire]  req: " + req);
+        // 1. 先构建一个待转发的响应对象，AddFriendResponse
+        AddFriendResponse response = new AddFriendResponse(req.getFromId(), req.getFriendName());
+        response.setType("rejectAddFriendRequire");
+        // 把这个 Java 对象转成 json 格式字符串
+        String respJson = objectMapper.writeValueAsString(response);
+        // 3. 给用户都发一份响应消息
+        WebSocketSession webSocketSession = onlineUserManager.getWebSocketSessionById(response.getFromId());
+        if (webSocketSession == null) {
+            // 如果用户不在线，则不发送
+            return;
+        }
+        log.info("[acceptAddFriendRequire] respJson: " + respJson);
+        webSocketSession.sendMessage(new TextMessage(respJson));
+    }
+
+
+    // 这里实现实时发送好友请求
+    private void sendAddFriendRequire(User fromUser, AddFriendRequest req) throws IOException {
+        log.info("[sendAddFriendRequire] fromUser: " + fromUser.toString() + ", req: " + req);
+        // 1. 先构建一个待转发的响应对象，AddFriendResponse
+        AddFriendResponse response = new AddFriendResponse(req.getAddReason(), req.getFriendId(), fromUser.getUserId(), fromUser.getUserName());
+        // 把这个 Java 对象转成 json 格式字符串
+        String respJson = objectMapper.writeValueAsString(response);
+        // 3. 给用户都发一份响应消息
+        WebSocketSession webSocketSession = onlineUserManager.getWebSocketSessionById(response.getFriendId());
+        if (webSocketSession == null) {
+            // 如果用户不在线，则不发送
+            return;
+        }
+        log.info("[sendAddFriendRequire] respJson: " + respJson);
+        webSocketSession.sendMessage(new TextMessage(respJson));
+    }
+
 
     // 通过这个方法来完成消息实际的转发工作
     // fromUser 消息发送者
@@ -93,7 +164,7 @@ public class WebSocketHandler extends TextWebSocketHandler {
             }
             webSocketSession.sendMessage(new TextMessage(respJson));
         }
-        
+
         // 4. 转发的消息需要记录到数据库中，方便我们获取历史消息
         Integer result = messageService.insertMessage(new Message(fromUser.getUserId(), fromUser.getUserName(), response.getSessionId(), response.getContent()));
         if (result == null || result < 1) {
