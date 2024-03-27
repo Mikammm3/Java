@@ -36,6 +36,117 @@ function initSwitchTab() {
 
 initSwitchTab();
 
+
+
+
+// 通过这个函数来达成用户一上线就能看到好友申请的效果(离线用户)
+function getAddFriendRequire() {
+    console.log("[getAddFriendRequire]");
+    $.ajax({
+        type: "get",
+        url: "friend/getAddRequire",
+        success: function (result) {
+            if (result != null) {
+                // TODO 将获取的好友申请展示到页面上
+                let sessionListUL = document.querySelector('#session-list');
+                for (let addRequire of result) {
+                    // 针对 addReason 的长度进行截断处理
+                    if (addRequire.addReason.length > 10) {
+                        addRequire.addReason = addRequire.addReason.substring(0, 10) + '...';
+                    }
+
+                    let li = document.createElement('li');
+                    li.style = 'height: 100px';
+                    // 把会话 id 保存到 li 标签的自定义属性中. 
+                    li.innerHTML = '<h3>' + addRequire.fromName + '</h3>'
+                        + '<p>' + addRequire.addReason + '</p>'
+                        + '<td> <button class="btn btn-primary" onclick="acceptAddFriendRequire(\'' + addRequire.fromId + '\')"> 接受 </button> </td>'
+                        + '<td> <button class="btn btn-primary" onclick="rejectAddFriendRequire(\'' + addRequire.fromId + '\')"> 拒绝 </button> </td>';
+                    sessionListUL.appendChild(li);
+                }
+                console.log(sessionListUL);
+            }
+        }
+    });
+
+}
+
+getAddFriendRequire();
+
+// 接受好友申请
+function acceptAddFriendRequire(fromId) {
+    // 记录 friendName
+    var selfUsername = document.querySelector('.left .user').innerHTML;
+    console.log("[acceptAddFriendRequire] fromId: " + fromId);
+    $.ajax({
+        type: "post",
+        url: "/friend/acceptAddFriend",
+        data: {
+            fromId: fromId
+        },
+        success: function (result) {
+            if (result == true) {
+                alert("添加成功");
+                getFriendList();
+            }
+        }
+    });
+    console.log("[acceptAddFriendRequire] websocket...");
+
+    // 实时告诉对方申请好友成功
+    let req = {
+        type: 'acceptAddFriendRequire',
+        fromId: fromId,
+        friendName: selfUsername
+    };
+    req = JSON.stringify(req);
+    console.log("接受好友申请");
+    console.log("[websocket] send: " + req);
+    // d) 通过 websocket 发送消息
+    websocket.send(req);
+
+    location.href = "client.html";
+}
+
+// 拒绝好友申请
+function rejectAddFriendRequire(fromId) {
+    // 记录 friendName
+    var selfUsername = document.querySelector('.left .user').innerHTML;
+    console.log("[rejectAddFriendRequire] fromId: " + fromId);
+    $.ajax({
+        type: "post",
+        url: "/friend/rejectAddFriend",
+        data: {
+            fromId: fromId
+        },
+        success: function (result) {
+            if (result == true) {
+                alert("拒绝成功");
+            }
+        }
+    });
+    // 用户在线则实时告诉申请结果
+    let req = {
+        type: 'rejectAddFriendRequire',
+        fromId: fromId,
+        friendName: selfUsername
+    };
+    req = JSON.stringify(req);
+    console.log("拒绝好友申请");
+    console.log("[websocket] send: " + req);
+    // d) 通过 websocket 发送消息
+    websocket.send(req);
+
+    console.log("[rejectAddFriendRequire] websocket...");
+    // 刷新页面防止好友申请还存在
+    location.href = "client.html";
+}
+
+
+
+
+
+
 /////////////////////////////////////////////////////
 // 操作 websocket
 /////////////////////////////////////////////////////
@@ -55,6 +166,15 @@ websocket.onmessage = function (e) {
     if (resp.type == 'message') {
         // 处理消息响应
         handleMessage(resp);
+    } else if (resp.type == 'addFriendRequire') {
+        // 处理好友申请
+        handleAddFriendRequire(resp);
+    } else if (resp.type == 'acceptAddFriendRequire') {
+        // 处理接受好友申请
+        handleAcceptAddFriendRequire(resp);
+    } else if (resp.type == 'rejectAddFriendRequire') {
+        // 处理拒绝好友申请
+        handleRejectAddFriendRequire(resp);
     } else {
         // resp 的 type 出错!
         console.log("resp.type 不符合要求!");
@@ -67,6 +187,46 @@ websocket.onclose = function () {
 
 websocket.onerror = function () {
     console.log("websocket 连接异常!");
+}
+
+
+
+
+function handleAcceptAddFriendRequire(addRequire) {
+    // 1. 先刷新请求者的好友列表
+    getFriendList();
+    // 2. 弹框提示添加成功
+    alert(addRequire.friendName + " 接受了你的好友申请");
+}
+
+function handleRejectAddFriendRequire(addRequire) {
+    // 1. 提示添加xxx失败
+    alert(addRequire.friendName + " 拒绝了你的好友申请");
+}
+
+
+
+function handleAddFriendRequire(addRequire) {
+    console.log("收到申请好友请求");
+    console.log(JSON.stringify(addRequire));
+    // 1. 清空之前的会话列表
+    let sessionListUL = document.querySelector('#session-list');
+    if (addRequire == null) return;
+    // 2. 实时发送一条好友申请 针对结果来构造页面
+    // 针对 addReason 的长度进行截断处理
+    if (addRequire.addReason != null && addRequire.addReason.length > 10) {
+        addRequire.addReason = addRequire.addReason.substring(0, 10) + '...';
+    }
+
+    let li = document.createElement('li');
+    // 把会话 id 保存到 li 标签的自定义属性中. 
+    li.innerHTML = '<h3>' + addRequire.fromName + '</h3>'
+        + '<p>' + addRequire.addReason + '</p>'
+        + '<td> <button class="btn btn-primary" onclick="acceptAddFriendRequire(\'' + addRequire.fromId + '\')"> 接受 </button> </td>'
+        + '<td> <button class="btn btn-primary" onclick="rejectAddFriendRequire(\'' + addRequire.fromId + '\')"> 拒绝 </button> </td>';
+    sessionListUL.appendChild(li);
+    console.log(sessionListUL);
+
 }
 
 function handleMessage(resp) {
@@ -408,3 +568,117 @@ function createSession(friendId, sessionLi) {
         }
     });
 }
+
+
+
+//  下面的方法是用来实现添加好友功能的
+
+function searchFriends() {
+    let sendButton = document.querySelector('.search button');
+    sendButton.onclick = function () {
+        var targetName = $(".search #userNmae").val();
+        if (targetName == null || targetName == '') {
+            console.log("targetName == null");
+            return;
+        }
+        console.log("targetName: " + targetName);
+        $.ajax({
+            type: "get",
+            url: "/user/getUsersByName",
+            data: {
+                userName: targetName
+            },
+            success: function (result) {
+                console.log(result);
+                if (result == null) {
+                    alert("没有你要查找的这号人物");
+                    return;
+                }
+                // 先清空右侧列表中的已有内容
+                var titleDiv = document.querySelector('.right .title');
+                titleDiv.innerHTML = '';
+                var messageShowDiv = document.querySelector('.right .message-show');
+                messageShowDiv.innerHTML = '';
+                var selfUsername = document.querySelector('.left .user').innerHTML;
+                console.log("selfUsername: " + selfUsername);
+                titleDiv.innerHTML = "好友搜索结果";
+                var finalHtml = '';
+                for (var user of result) {
+
+                    if (user.userName != selfUsername) {
+                        // 排除自己
+                        finalHtml += '<div class="message">';
+                        finalHtml += '<tr>';
+                        finalHtml += '<td>' + user.userName + '</td>';
+                        finalHtml += '<th> <input id=reason' + user.userId + ' type="text" placeholder="添加理由"></th>';
+                        finalHtml += '<td> <button class="btn btn-primary" onclick="addFriend(\'' + user.userId + '\')"> 添加好友 </button> </td>';
+                        finalHtml += "</tr>"
+                        finalHtml += "</div>"
+                    }
+
+                }
+                messageShowDiv.innerHTML = finalHtml;
+                console.log(messageShowDiv);
+            }
+        });
+
+
+    }
+}
+
+searchFriends();
+
+
+function addFriend(friendId, addReason) {
+    var str = '.message #reason' + friendId;
+    // console.log(str);
+
+    addReason = document.querySelector(str).value;
+    if (addReason == '') {
+        alert("添加理由不能为空");
+        return;
+    }
+
+    // 发送添加好友请求
+    console.log("添加理由, reason: " + addReason + ", friendId: " + friendId);
+    $.ajax({
+        type: "post",
+        url: "friend/add",
+        data: {
+            reason: addReason,
+            friendId: friendId
+        },
+        success: function (result) {
+            if (result > 0) {
+                // console.log(result);
+                alert("发送好友申请成功");
+                sendAddFriendRequire(friendId, addReason);
+            } else {
+                alert("请勿重复发送好友申请！");
+            }
+        }
+    });
+
+}
+
+addFriend();
+
+
+// 这是实现 在线用户实时的看到好友申请
+function sendAddFriendRequire(friendId, addReason) {
+    // b) 获取当前选中的 li 标签的 sessionId
+    // let selectedLi = document.querySelector('#session-list .selected');
+    // let sessionId = selectedLi.getAttribute('message-session-id');
+    // c) 构造 json 数据
+    let req = {
+        type: 'addFriendRequire',
+        addReason: addReason,
+        friendId: friendId,
+    };
+    req = JSON.stringify(req);
+    console.log("[websocket] send: " + req);
+    // d) 通过 websocket 发送消息
+    websocket.send(req);
+}
+
+
