@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <!-- 导航栏  -->
+    <div class="nav">
+        网页聊天
+    </div>
+    <!-- 主窗口区  -->
+    <div class="login-container">
+        <div class="login-dialog">
+            <h3>注册</h3>
+            <div class="row">
+                <span>用户名</span>
+                <input type="text" id="userName">
+            </div>
+            <div class="row">
+                <span>密码</span>
+                <input type="password" id="password">
+            </div>
+            <div class="row">
+                <button id="submit">注册</button>
+            </div>
+        </div>
+    </div>
+    <!-- 引入 jquery -->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+    <script>
+        $("#submit").click(function () {
+            var userName = $("#userName").val();
+            var password = $("#password").val();
+            if (userName == '' || password == '') {
+                alert("用户名和密码不能为空! ");
+                return;
+            }
+
+
+            $.ajax({
+                type: "post",
+                url: "/user/register",
+                data: {
+                    "userName": userName,
+                    "password": password
+                },
+                success: function (result) {
+                    
+                    if (result != null && result.userId > 0) {
+                        alert("注册成功")
+                        location.href = "login.html";
+                    } else {
+                        alert("用户名被占用!");
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
