@@ -11,4 +11,6 @@ public class AddFriend {
     private Integer targetId;
     private String addReason;
     private Date createTime;
+
+    private String fromName;
 }

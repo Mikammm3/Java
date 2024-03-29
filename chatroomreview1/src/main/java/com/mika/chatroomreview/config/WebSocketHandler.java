@@ -63,9 +63,69 @@ public class WebSocketHandler extends TextWebSocketHandler {
         if (Constant.MESSAGE.equals(messageRequest.getType())) {
             // 处理消息的转发以及保存
             transferMessage(user, messageRequest);
+        } else if (Constant.ADD_FRIEND_REQUIRE.equals(messageRequest.getType())) {
+            AddFriendRequest req = objectMapper.readValue(message.getPayload(), AddFriendRequest.class);
+            // 处理好友申请的发送以及保存
+            sendAddFriendRequire(user, req);
+        } else if (Constant.ACCEPT_ADD_FRIEND_REQUIRE.equals(messageRequest.getType())) {
+            AddFriendRequest req = objectMapper.readValue(message.getPayload(), AddFriendRequest.class);
+            req.setType(Constant.ACCEPT_ADD_FRIEND_REQUIRE);
+            // 处理接受好友申请
+            acceptAddFriendRequire(user, req);
+        } else if (Constant.REJECT_ADD_FRIEND_REQUIRE.equals(messageRequest.getType())) {
+            AddFriendRequest req = objectMapper.readValue(message.getPayload(), AddFriendRequest.class);
+            req.setType(Constant.REJECT_ADD_FRIEND_REQUIRE);
+            // 处理拒绝好友申请
+            rejectAddFriendRequire(user, req);
         } else {
             log.error("[WebSocketHandler] type 类型错误！" + messageRequest.getType());
         }
+    }
+
+    private void acceptAddFriendRequire(User user, AddFriendRequest req) throws IOException {
+        if (user == null || req == null) return;
+        // 1. 先构造一个响应
+        AddFriendResponse resp = new AddFriendResponse(req.getType(), req.getFromId(), user.getUserName());
+        // 2. 根据 fromId 获取 session
+        WebSocketSession session = onlineUserManager.getWebSocketSessionById(resp.getFromId());
+        if (session == null) {
+            // 用户不在线
+            return;
+        }
+        // 3. 发送 respJson
+        String respJson = objectMapper.writeValueAsString(resp);
+        session.sendMessage(new TextMessage(respJson));
+    }
+
+    private void rejectAddFriendRequire(User user, AddFriendRequest req) throws IOException {
+        if (user == null || req == null) return;
+        // 1. 先构造一个响应
+        AddFriendResponse resp = new AddFriendResponse(req.getType(), req.getFromId(), user.getUserName());
+        // 2. 根据 fromId 获取 session
+        WebSocketSession session = onlineUserManager.getWebSocketSessionById(resp.getFromId());
+        if (session == null) {
+            // 用户不在线
+            return;
+        }
+        // 3. 发送 respJson
+        String respJson = objectMapper.writeValueAsString(resp);
+        session.sendMessage(new TextMessage(respJson));
+    }
+
+    private void sendAddFriendRequire(User user, AddFriendRequest req) throws IOException {
+        if (user == null || req == null) return;
+        // 1. 先构造一个响应
+        AddFriendResponse resp = new AddFriendResponse(req.getAddReason(), req.getFriendId(), user.getUserName(), user.getUserId());
+        // 2. 根据 friendId 获取 session
+        WebSocketSession session = onlineUserManager.getWebSocketSessionById(req.getFriendId());
+        if (session == null) {
+            // 用户不在线，则不发送
+            return;
+        }
+        // 3. 将响应转化成 json 格式，然后发送
+        String respJson = objectMapper.writeValueAsString(resp);
+        session.sendMessage(new TextMessage(respJson));
+
     }
 
     private void transferMessage(User user, MessageRequest messageRequest) throws IOException {

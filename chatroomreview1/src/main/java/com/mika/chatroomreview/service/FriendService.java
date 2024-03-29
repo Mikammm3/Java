@@ -28,4 +28,16 @@ public class FriendService {
     public Integer addFriendRequired(String addReason, Integer fromId, Integer targetId) {
         return friendMapper.addFriendRequired(addReason, fromId, targetId);
     }
+
+    public List<AddFriend> getAddRequire(Integer targetId) {
+        return friendMapper.getAddRequire(targetId);
+    }
+
+    public Integer insertFriend(Integer userId, Integer friendId) {
+        return friendMapper.insertFriend(userId, friendId);
+    }
+
+    public Integer deleteAddFriendRequire(Integer fromId, Integer targetId) {
+        return friendMapper.deleteAddFriendRequire(fromId, targetId);
+    }
 }
