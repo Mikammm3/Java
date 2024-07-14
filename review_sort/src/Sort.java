@@ -142,4 +142,21 @@ public class Sort {
             }
         }
     }
+
+
+    public static void bubbleSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            // 优化
+            boolean flg = false;
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    flg = true;
+                    swap(arr, j, j + 1);
+                }
+            }
+            if (!flg) {
+                break;
+            }
+        }
+    }
 }

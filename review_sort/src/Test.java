@@ -17,5 +17,8 @@ public class Test {
         int[] arr5 = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         Sort.heapSort(arr5);
         System.out.println(Arrays.toString(arr5));
+        int[] arr6 = {5, 1, 3, 7, 9, 8, 6, 2, 4, 5};
+        Sort.bubbleSort(arr6);
+        System.out.println(Arrays.toString(arr6));
     }
 }
