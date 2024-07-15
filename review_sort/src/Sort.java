@@ -159,4 +159,64 @@ public class Sort {
             }
         }
     }
+
+
+    public static void quickSort(int[] arr, int start, int end) {
+        // 如果左边是一个节点或者左边没有节点，那就可以不用递归了
+        if (start >= end) {
+            return;
+        }
+        // 找基准
+        int pivot = partition2(arr, start, end);
+        // 递归基准左边
+        quickSort(arr, start, pivot - 1);
+        // 递归基准右边
+        quickSort(arr, pivot + 1, end);
+    }
+
+    // Hoare 法
+    private static int partition(int[] arr, int left, int right) {
+        int key = arr[left];
+        int index = left;
+        while (left < right) {
+            // right 往前找比 key 小的
+            while (left < right && arr[right] >= key) {
+                right--;
+            }
+            // left 往后找比 key 大的
+            while (left < right && arr[left] <= key) {
+                left++;
+            }
+            // 到了这里，arr[right] 一定小于 key
+            // arr[left] 一定大于 key
+            // 交换 arr[left] 和 arr[right]
+            swap(arr, left, right);
+        }
+        // 最后当 left 和 right 相遇时，交换
+        swap(arr, index, left);
+        return left;
+    }
+
+    // 挖坑法
+    private static int partition2(int[] arr, int left, int right) {
+        int tmp = arr[left];
+        while (left < right) {
+            // right 找比 tmp 小的数
+            while (left < right && arr[right] >= tmp) {
+                right--;
+            }
+            // 此时，right 找到了比 tmp 小的数，填坑
+            arr[left] = arr[right];
+            //此时，新的坑就是 right 下标
+            // left 找比 tmp 大的数
+            while (left < right && arr[left] <= tmp) {
+                left++;
+            }
+            // 此时，left 找到了比 tmp 大的数，填坑
+            arr[right] = arr[left];
+        }
+        // left 和 right 相遇，填坑
+        arr[left] = tmp;
+        return left;
+    }
 }

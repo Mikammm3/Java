@@ -20,5 +20,8 @@ public class Test {
         int[] arr6 = {5, 1, 3, 7, 9, 8, 6, 2, 4, 5};
         Sort.bubbleSort(arr6);
         System.out.println(Arrays.toString(arr6));
+        int[] arr7 = {6, 1, 2, 7, 9, 3, 4, 5, 6, 8};
+        Sort.quickSort(arr7, 0, arr7.length - 1);
+        System.out.println(Arrays.toString(arr7));
     }
 }
