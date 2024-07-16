@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class Sort {
 
     public static void insertSort(int[] arr) {
@@ -167,7 +169,7 @@ public class Sort {
             return;
         }
         // 找基准
-        int pivot = partition2(arr, start, end);
+        int pivot = partition3(arr, start, end);
         // 递归基准左边
         quickSort(arr, start, pivot - 1);
         // 递归基准右边
@@ -218,5 +220,114 @@ public class Sort {
         // left 和 right 相遇，填坑
         arr[left] = tmp;
         return left;
+    }
+
+    private static int partition3(int[] arr, int left, int right) {
+        int prev = left;
+        int cur = left + 1;
+        int key = arr[left];
+        while (cur <= right) {
+            // 如果 cur 找到了比 key 小的数，那么 prev 往后走，再判断 prev 和 cur 之间是否有元素(比 key 大)
+            if (arr[cur] < key && arr[++prev] != arr[cur]) {
+                swap(arr, prev, cur);
+            }
+            cur++;
+        }
+        swap(arr, prev, left);
+        return prev;
+    }
+
+
+    private static int midOfThree(int[] arr, int left, int right) {
+        // 防止溢出
+        int mid = left + (right - left) / 2;
+        int max = (arr[left] > arr[mid] ? arr[left] : arr[mid]);
+        max = max > arr[right] ? max : arr[right];
+        int min = (arr[left] < arr[mid] ? arr[left] : arr[mid]);
+        min = min < arr[right] ? min : arr[right];
+        if (arr[left] != min && arr[left] != max) {
+            return left;
+        } else if (arr[mid] != min && arr[mid] != max) {
+            return mid;
+        } else {
+            return right;
+        }
+    }
+
+
+    public static void quickSort2(int[] arr, int start, int end) {
+        // 如果左边是一个节点或者左边没有节点，那就可以不用递归了
+        if (start >= end) {
+            return;
+        }
+        if (end - start + 1 <= 10) {
+            // 插入排序
+            insertSortRange(arr, start, end);
+            return;
+        }
+
+        // 三数取中
+        int index = midOfThree(arr, start, end);
+        // 交换
+        swap(arr, start, index);
+
+        // 找基准
+        int pivot = partition3(arr, start, end);
+        // 递归基准左边
+        quickSort2(arr, start, pivot - 1);
+        // 递归基准右边
+        quickSort2(arr, pivot + 1, end);
+    }
+
+
+    private static void insertSortRange(int[] arr, int start, int end) {
+        for (int i = start + 1; i <= end; i++) {
+            int tmp = arr[i];
+            int j = i - 1;
+            for (; j >= start; j--) {
+                if (arr[j] > tmp) {
+                    arr[j + 1] = arr[j];
+                } else {
+                    break;
+                }
+            }
+            arr[j + 1] = tmp;
+        }
+    }
+
+
+    public static void quickSortNor(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        Stack<Integer> stack = new Stack<>();
+        // 找基准
+        int pivot = partition2(arr, start, end);
+        if (pivot - start >= 2) {
+            // 基准左边有两个或以上元素，左边区间入栈
+            stack.push(start);
+            stack.push(pivot - 1);
+        }
+        if (end - pivot >= 2) {
+            // 基准右边有两个或以上元素，右边区间入栈
+            stack.push(pivot + 1);
+            stack.push(end);
+        }
+        while (!stack.isEmpty()) {
+            end = stack.pop();
+            start = stack.pop();
+            // 找基准
+            pivot = partition2(arr, start, end);
+            if (pivot - start >= 2) {
+                // 基准左边有两个或以上元素，左边区间入栈
+                stack.push(start);
+                stack.push(pivot - 1);
+            }
+            if (end - pivot >= 2) {
+                // 基准右边有两个或以上元素，右边区间入栈
+                stack.push(pivot + 1);
+                stack.push(end);
+            }
+        }
     }
 }
