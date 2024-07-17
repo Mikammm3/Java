@@ -330,4 +330,69 @@ public class Sort {
             }
         }
     }
+
+    public static void mergeSort(int[] arr, int left, int right) {
+        if (left >= right) {
+            // 如果区间只有一个元素
+            return;
+        }
+        // 均匀分割
+        int mid = left + (right - left) / 2;
+        // 分割左边
+        mergeSort(arr, left, mid);
+        // 分割右边
+        mergeSort(arr, mid + 1, right);
+        // 合并
+        merge(arr, left, mid, right);
+    }
+
+    // 合并有序数组
+    private static void merge(int[] arr, int left, int mid, int right) {
+        int[] tmpArr = new int[right - left + 1];
+        int i = left, j = mid + 1;
+        int k = 0;
+        while (i <= mid && j <= right) {
+            if (arr[i] <= arr[j]) {
+                tmpArr[k++] = arr[i++];
+            } else {
+                tmpArr[k++] = arr[j++];
+            }
+        }
+        while (i <= mid) {
+            tmpArr[k++] = arr[i++];
+        }
+        while (j <= right) {
+            tmpArr[k++] = arr[j++];
+        }
+
+        //拷贝回原数组
+        for (i = 0; i < tmpArr.length; i++) {
+            arr[i + left] = tmpArr[i];
+        }
+    }
+
+
+    public static void mergeSortNor(int[] arr) {
+        int gap = 1;// 分组
+        while (gap < arr.length) {
+            // 两组两组来合并
+            for (int i = 0; i < arr.length; i += 2 * gap) {
+                int left = i;
+                int mid = left + gap - 1;
+                int right = mid + gap;
+                // 判断 mid 和 right 是否越界
+                if (mid >= arr.length) {
+                    mid = arr.length - 1;
+                }
+                if (right >= arr.length) {
+                    right = arr.length - 1;
+                }
+                // 合并
+                merge(arr, left, mid, right);
+            }
+            gap *= 2;
+        }
+    }
+
+
 }

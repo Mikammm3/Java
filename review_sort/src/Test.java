@@ -22,7 +22,7 @@ public class Test {
 //        Sort.bubbleSort(arr6);
 //        System.out.println(Arrays.toString(arr6));
         int[] arr7 = {6, 1, 2, 7, 9, 3, 4, 5, 6, 8};
-        Sort.quickSortNor(arr7);
+        Sort.mergeSortNor(arr7);
         System.out.println(Arrays.toString(arr7));
 //
 //        int[] arr = new int[10];
