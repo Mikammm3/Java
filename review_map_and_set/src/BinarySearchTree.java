@@ -64,4 +64,70 @@ public class BinarySearchTree {
         return true;
     }
 
+
+    // 删除
+    public void remove(int val) {
+        // 先找到要删除的节点
+        TreeNode cur = root;
+        TreeNode parent = null;
+        while (cur != null) {
+            if (val > cur.val) {
+                parent = cur;
+                cur = cur.right;
+            } else if (val < cur.val) {
+                parent = cur;
+                cur = cur.left;
+            } else {
+                // 找到了，删除对应节点
+                removeNode(parent, cur);
+                return;
+            }
+        }
+    }
+
+    private void removeNode(TreeNode parent, TreeNode cur) {
+        if (cur.left == null) {
+            if (cur == root) {
+                // cur 为根节点
+                root = cur.right;
+            } else if (cur == parent.left) {
+                // cur 是 parent 的左孩子
+                parent.left = cur.right;
+            } else {
+                // cur 是 parent 的右孩子
+                parent.right = cur.right;
+            }
+
+        } else if (cur.right == null) {
+            if (root == cur) {
+                // cur 为根节点
+                root = cur.left;
+            } else if (cur == parent.left) {
+                // 左孩子
+                parent.left = cur.left;
+            } else {
+                // 右孩子
+                parent.right = cur.left;
+            }
+
+        } else {
+            // 找 cur.left 的最后一个右孩子
+            TreeNode target = cur.left;// 替罪羊
+            TreeNode targetParent = cur;
+            while (target.right != null) {
+                targetParent = target;
+                target = target.right;
+            }
+            // 找到了 target，赋值
+            cur.val = target.val;
+            // 删除 target
+            if (target == targetParent.right) {
+                // 有右孩子
+                targetParent.right = target.left;
+            } else {
+                // 没有右孩子
+                targetParent.left = target.left;
+            }
+        }
+    }
 }
