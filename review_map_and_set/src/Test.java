@@ -119,4 +119,172 @@ public class Test {
     }
 }
 
+//class Solution {
+//    public int singleNumber(int[] nums) {
+//        // 创建哈希表
+//        Map<Integer, Integer> hash = new HashMap<>();
+//        // 统计数组中每个元素出现的次数
+//        for (int i = 0; i < nums.length; i++) {
+//            int key = nums[i];
+//            // 先根据 key 得到 key 的出现次数
+//            int count = hash.getOrDefault(key, 0);
+//            // 然后再更新 key 的出现次数
+//            hash.put(key, count + 1);
+//        }
+//        // 遍历数组，看看哪个元素出现次数是 1
+//        for (int i = 0; i < nums.length; i++) {
+//            int key = nums[i];
+//            // 先根据 key 得到 key 的出现次数
+//            int count = hash.get(key);
+//            // 然后再判断 key 的出现次数是否为 1
+//            if (count == 1) {
+//                // 说明找到了，返回即可。
+//                return key;
+//            }
+//        }
+//
+//        // 到了这里，说明没有出现次数为 1 的数字，(但是看题得知代码不可能走到这里，随便返回一个数就行)
+//        return -1;
+//    }
+//}
 
+
+//class Solution {
+//    public int singleNumber(int[] nums) {
+//        Set<Integer> set = new HashSet<>();
+//        for (int n : nums) {
+//            if (set.contains(n)) {
+//                // 如果存在，则从 set 中删除该元素
+//                set.remove(n);
+//            } else {
+//                // 如果不存在，说明该元素是第一次出现，添加进 set 中
+//                set.add(n);
+//            }
+//        }
+//        Object[] ans = set.toArray();
+//        return (int) ans[0];
+//    }
+//}
+
+
+//class Solution {
+//    public int numJewelsInStones(String jewels, String stones) {
+//        Set<Character> set = new HashSet<>();
+//        // 将宝石放入 set 中
+//        for (char ch : jewels.toCharArray()) {
+//            set.add(ch);
+//        }
+//        // 记录宝石的数量
+//        int count = 0;
+//        // 然后遍历石头中的每个元素，看看该元素是否在 set 中存在，如果是，count++
+//        for (char ch : stones.toCharArray()) {
+//            if (set.contains(ch)) {
+//                count++;
+//            }
+//        }
+//        return count;
+//    }
+//}
+
+
+//class Solution {
+//    public int numJewelsInStones(String jewels, String stones) {
+//        int count = 0;
+//        for (char c : stones.toCharArray()) {
+//            String str = c + "";
+//            // 看看 str 是否是 jewels 的子串
+//            if (jewels.contains(str)) {
+//                count++;
+//            }
+//        }
+//        return count;
+//    }
+//}
+
+
+//import java.util.*;
+//
+//// 注意类名必须为 Main, 不要有任何 package xxx 信息
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        // 注意 hasNext 和 hasNextLine 的区别
+//        while (in.hasNext()) { // 注意 while 处理多个 case
+//            String s1 = in.next();// 原来输入的
+//            String s2 = in.next();// 实际输出的
+//            print(s1, s2);
+//        }
+//    }
+//
+//
+//    public static void print(String s1, String s2) {
+//        // 将实际输出的字符串的每个元素放入 set1 中
+//        // 然后遍历原本输入的字符串的每个元素，
+//        // 看看该元素是否在 set1 中存在，如果存在说明该元素键盘没坏
+//        // 如果不存在，则存入 set2 中，
+//        // 最后遍历原来输出的内容，看看这个元素是否在 set2 中存在
+//        // 如果存在，说明是坏键，先把这个坏键从 set2 中删除，然后输出，
+//        // 然后判断 set2 是否为空，如果为空，直接返回。
+//        Set<Character> set1 = new HashSet<>();
+//        Set<Character> set2 = new HashSet<>();
+//        for (char ch : s2.toUpperCase().toCharArray()) {
+//            set1.add(ch);
+//        }
+//        for (char ch : s1.toUpperCase().toCharArray()) {
+//            if (!set1.contains(ch)) {
+//                set2.add(ch);
+//            }
+//        }
+//        for (char ch : s1.toUpperCase().toCharArray()) {
+//            if (set2.contains(ch)) {
+//                set2.remove(ch);
+//                System.out.print(ch);
+//                if (set2.isEmpty()) {
+//                    System.out.println();
+//                    return;
+//                }
+//            }
+//        }
+//    }
+//}
+
+
+//import java.util.*;
+//
+//// 注意类名必须为 Main, 不要有任何 package xxx 信息
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        // 注意 hasNext 和 hasNextLine 的区别
+//        while (in.hasNext()) { // 注意 while 处理多个 case
+//            String s1 = in.next();// 原来输入的
+//            String s2 = in.next();// 实际输出的
+//            print(s1, s2);
+//        }
+//    }
+//
+//
+//    public static void print(String s1, String s2) {
+//        // 将实际输出的字符串的每个元素放入 set1 中
+//        // 然后遍历原本输入的字符串的每个元素，
+//        // 看看该元素是否在 set1 中存在，如果存在说明该元素键盘没坏
+//        // 如果不存在，则看看这个元素是否在 set2 中存在
+//        // 如果不存在，说明是第一次遇见坏键，打印，然后加到 set2 中
+//        Set<Character> set1 = new HashSet<>();
+//        Set<Character> set2 = new HashSet<>();
+//        char[] arr1 = s1.toUpperCase().toCharArray();
+//        char[] arr2 = s2.toUpperCase().toCharArray();
+//        for (char ch : arr2) {
+//            set1.add(ch);
+//        }
+//        for (char ch : arr1) {
+//            // 既是坏键，又是第一次遇到时，才打印该坏键
+//            if (!set1.contains(ch) && !set2.contains(ch)) {
+//                System.out.print(ch);
+//                set2.add(ch);
+//            }
+//        }
+//        System.out.println();
+//
+//    }
+//}
