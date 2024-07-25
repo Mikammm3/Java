@@ -288,3 +288,90 @@ public class Test {
 //
 //    }
 //}
+
+
+//class Solution {
+//    public Node copyRandomList(Node head) {
+//        Map<Node, Node> hash = new HashMap<>();
+//        Node cur = head;
+//        Node newHead = new Node(-1);
+//        // 将新老节点对应的关系放入哈希表中
+//        while (cur != null) {
+//            Node node = new Node(cur.val);
+//            if (hash.isEmpty()) {
+//                newHead.next = node;
+//            }
+//            hash.put(cur, node);
+//            cur = cur.next;
+//        }
+//        // 重新遍历老节点，连接新链表关系
+//        cur = head;
+//        while (cur != null) {
+//            hash.get(cur).next = hash.getOrDefault(cur.next, null);
+//            hash.get(cur).random = hash.getOrDefault(cur.random, null);
+//            cur = cur.next;
+//        }
+//
+//        // 最后返回新链表头节点即可
+//        return newHead.next;
+//
+//    }
+//}
+
+
+class Solution {
+    public List<String> topKFrequent(String[] words, int k) {
+        Map<String, Integer> hash = new HashMap<>();
+        // 统计每个单词出现的次数
+        getWordsTime(words, hash);
+        Set<Map.Entry<String, Integer>> set = hash.entrySet();
+
+        // 建立小根堆, 需要传比较器来指定比较方式
+        PriorityQueue<Map.Entry<String, Integer>> minHeap = new PriorityQueue<>(new Comparator<Map.Entry<String, Integer>>() {
+            @Override
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                if (o1.getValue().compareTo(o2.getValue()) == 0) {
+                    // 如果频率相同，那就需要按字母顺序建立大根堆
+                    return o2.getKey().compareTo(o1.getKey());
+                }
+                return o1.getValue() - o2.getValue();
+            }
+        });
+
+        // 遍历 set，调整优先级队列
+        for (Map.Entry<String, Integer> entry : set) {
+            if (minHeap.size() < k) {
+                minHeap.offer(entry);
+            } else {
+                Map.Entry<String, Integer> top = minHeap.peek();
+                // 如果当前元素出现频率比堆顶元素出现频率要高，则弹出堆顶元素，然后当前元素入队
+                if (entry.getValue().compareTo(top.getValue()) > 0) {
+                    minHeap.poll();
+                    minHeap.offer(entry);
+                } else if (entry.getValue().compareTo(top.getValue()) == 0) {
+                    // 看字集序, 让字母顺序小的进来
+                    if (entry.getKey().compareTo(top.getKey()) < 0) {
+                        minHeap.poll();
+                        minHeap.offer(entry);
+                    }
+
+                }
+            }
+        }
+        List<String> list = new ArrayList<>();
+        while (minHeap.size() != 0) {
+            list.add(minHeap.poll().getKey());
+        }
+        Collections.reverse(list);
+        return list;
+    }
+
+
+    // 统计每个单词出现的次数
+    public void getWordsTime(String[] words, Map<String, Integer> hash) {
+        for (String word : words) {
+            int val = hash.getOrDefault(word, 0);
+            hash.put(word, val + 1);
+        }
+    }
+}
